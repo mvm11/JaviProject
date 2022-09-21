@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -75,26 +76,65 @@
                         <outlet property="emailTextField" destination="ARX-uT-qNI" id="MuP-rE-odq"/>
                         <outlet property="passwordTextField" destination="TQa-Ej-OIJ" id="4YK-JR-5Rd"/>
                         <outlet property="startButton" destination="tlK-Qw-obG" id="VWO-Cj-aQz"/>
+                        <segue destination="vet-XS-iYF" kind="show" identifier="goToHomeViewController" id="Enp-N0-Azz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="882.60869565217399" y="49.553571428571423"/>
         </scene>
-        <!--Home View Controller-->
-        <scene sceneID="Qad-cr-l7v">
+        <!--Inicio-->
+        <scene sceneID="cqj-cj-RfK">
             <objects>
-                <viewController id="SwW-fb-oZ6" customClass="HomeViewController" customModule="FirebaseLogin" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hEP-YI-TYH">
+                <viewController id="LRB-bK-0Wp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MrR-kx-1Wy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="1jZ-wb-FeQ"/>
+                        <viewLayoutGuide key="safeArea" id="GlN-JB-UtA"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Inicio" image="scribble.variable" catalog="system" id="WQT-AI-EdK"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c90-hC-j94" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0jT-Tz-gBp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2552" y="-245"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="cXn-y0-A6F">
+            <objects>
+                <tabBarController id="vet-XS-iYF" customClass="HomeViewController" customModule="FirebaseLogin" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="z5V-Hg-TnL"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TpJ-BL-BRJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.83955118304873722" green="0.87871979630473307" blue="0.90789378058050096" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" systemColor="tintColor"/>
+                        <imageReference key="backgroundImage" image="scribble.variable" catalog="system" symbolScale="medium"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="LRB-bK-0Wp" kind="relationship" relationship="viewControllers" id="YmV-Uu-Nbd"/>
+                        <segue destination="hVN-si-Nfb" kind="relationship" relationship="viewControllers" id="3xU-fY-KKn"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ja-xA-lQf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1738" y="50"/>
+        </scene>
+        <!--Mapa-->
+        <scene sceneID="6nE-66-MaF">
+            <objects>
+                <viewController id="hVN-si-Nfb" customClass="MapViewController" customModule="FirebaseLogin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Q3-dL-zxZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="XNh-L3-48U"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Mapa" image="scribble.variable" catalog="system" id="3p5-Hg-hsR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bkt-cE-82o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2551" y="421"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hru-QB-Sa3">
@@ -117,6 +157,7 @@
     </scenes>
     <resources>
         <image name="Logo.png" width="262" height="149"/>
+        <image name="scribble.variable" catalog="system" width="128" height="118"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -125,6 +166,9 @@
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

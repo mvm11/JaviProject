@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  FirebaseLogin
-//
-//  Created by Mateo Valencia on 20/09/22.
-//
-
 import UIKit
 import FirebaseAuth
 
@@ -18,6 +11,7 @@ class ViewController: UIViewController {
     
     var user = User(email: "", password: "")
     var activityIndicator:UIActivityIndicatorView!
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +61,10 @@ class ViewController: UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
+    func navegateToNextController(id: String){
+        performSegue(withIdentifier: id, sender: self)
+    }
+    
     
     @IBAction func startButtonAction(_ sender: Any) {
         if let email = emailTextField.text, let password = passwordTextField.text{
@@ -88,7 +86,7 @@ class ViewController: UIViewController {
                     case .none:
                     if (result?.user) != nil {
                         self.hideActivityIndicatorView()
-                        print("Entrooooo")
+                        self.navegateToNextController(id: "goToHomeViewController")
                       }
                 }
             }
