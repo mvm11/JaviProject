@@ -66,29 +66,33 @@ class ViewController: UIViewController {
     }
     
     
+    fileprivate func validateUserLogin(_ error: Error?, _ result: AuthDataResult?) {
+        switch error {
+        case .some(let error as NSError) where error.code == AuthErrorCode.wrongPassword.rawValue:
+            self.displayActivityIndicatorView()
+            self.showErrorMessage("Contraseña incorrecta")
+            self.hideActivityIndicatorView()
+        case .some(let error as NSError) where error.code == AuthErrorCode.userNotFound.rawValue:
+            self.displayActivityIndicatorView()
+            self.showErrorMessage("Correo incorrecto")
+            self.hideActivityIndicatorView()
+        case .some(let error):
+            self.displayActivityIndicatorView()
+            self.showErrorMessage("Login error: \(error.localizedDescription)")
+            self.hideActivityIndicatorView()
+        case .none:
+            if (result?.user) != nil {
+                self.hideActivityIndicatorView()
+                self.navegateToNextController(id: "goToHomeViewController")
+            }
+        }
+    }
+    
     @IBAction func startButtonAction(_ sender: Any) {
         if let email = emailTextField.text, let password = passwordTextField.text{
             Auth.auth().signIn(withEmail: email, password: password){(result, error) in
                 self.displayActivityIndicatorView()
-                switch error {
-                    case .some(let error as NSError) where error.code == AuthErrorCode.wrongPassword.rawValue:
-                    self.displayActivityIndicatorView()
-                    self.showErrorMessage("Contraseña incorrecta")
-                    self.hideActivityIndicatorView()
-                case .some(let error as NSError) where error.code == AuthErrorCode.userNotFound.rawValue:
-                    self.displayActivityIndicatorView()
-                    self.showErrorMessage("Correo incorrecto")
-                    self.hideActivityIndicatorView()
-                    case .some(let error):
-                    self.displayActivityIndicatorView()
-                    self.showErrorMessage("Login error: \(error.localizedDescription)")
-                    self.hideActivityIndicatorView()
-                    case .none:
-                    if (result?.user) != nil {
-                        self.hideActivityIndicatorView()
-                        self.navegateToNextController(id: "goToHomeViewController")
-                      }
-                }
+                self.validateUserLogin(error, result)
             }
         }
     }

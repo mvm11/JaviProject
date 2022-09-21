@@ -160,7 +160,6 @@
 				E7547F6628DA77AA00E72E4D /* GoogleService-Info.plist */,
 				E7547F3628DA76C700E72E4D /* AppDelegate.swift */,
 				E7547F3828DA76C700E72E4D /* SceneDelegate.swift */,
-				E7547F3C28DA76C700E72E4D /* Main.storyboard */,
 				E7547F3F28DA76CA00E72E4D /* Assets.xcassets */,
 				E7547F4128DA76CA00E72E4D /* LaunchScreen.storyboard */,
 				E7547F4428DA76CA00E72E4D /* Info.plist */,
@@ -213,6 +212,7 @@
 		E7547F6F28DAA6EA00E72E4D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E7547F3C28DA76C700E72E4D /* Main.storyboard */,
 				E7547F3A28DA76C700E72E4D /* ViewController.swift */,
 				E717453B28DB495F004468F6 /* HomeViewController.swift */,
 				E717453D28DB5C73004468F6 /* MapViewController.swift */,
