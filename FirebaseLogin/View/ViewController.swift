@@ -1,7 +1,7 @@
 import UIKit
 import FirebaseAuth
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIWindowSceneDelegate {
     
     //MARK: - @IBOutlets
     
@@ -9,6 +9,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var startButton: UIButton!
     
+    var window: UIWindow?
     var user = User(email: "", password: "")
     var activityIndicator:UIActivityIndicatorView!
    
@@ -83,7 +84,12 @@ class ViewController: UIViewController {
         case .none:
             if (result?.user) != nil {
                 self.hideActivityIndicatorView()
-                self.navegateToNextController(id: "goToHomeViewController")
+                self.navigationController?.pushViewController(HomeViewController(), animated: true)
+                
+                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController; self.present(nextViewController, animated: true, completion: nil)
+                
+                //self.navegateToNextController(id: "goToHomeViewController")
             }
         }
     }

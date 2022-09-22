@@ -26,6 +26,8 @@
 		E7547F6A28DA7AE500E72E4D /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E7547F6928DA7AE500E72E4D /* Logo.png */; };
 		E7547F6D28DA7F6B00E72E4D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7547F6C28DA7F6B00E72E4D /* User.swift */; };
 		E7547F7628DAA7A100E72E4D /* FirebaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7547F7528DAA7A100E72E4D /* FirebaseViewModel.swift */; };
+		E79D350528DC7553009E6752 /* InicioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D350428DC7553009E6752 /* InicioViewController.swift */; };
+		E79D350728DC7860009E6752 /* profile.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E79D350628DC785F009E6752 /* profile.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		E7547F6928DA7AE500E72E4D /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = ../../../Logo.png; sourceTree = "<group>"; };
 		E7547F6C28DA7F6B00E72E4D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E7547F7528DAA7A100E72E4D /* FirebaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseViewModel.swift; sourceTree = "<group>"; };
+		E79D350428DC7553009E6752 /* InicioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioViewController.swift; sourceTree = "<group>"; };
+		E79D350628DC785F009E6752 /* profile.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = profile.jpeg; path = ../../../profile.jpeg; sourceTree = "<group>"; };
 		EAB2156EC04E701A6075CBBC /* Pods-FirebaseLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseLogin.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseLogin/Pods-FirebaseLogin.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,6 +191,7 @@
 		E7547F6828DA7A5000E72E4D /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				E79D350628DC785F009E6752 /* profile.jpeg */,
 				E7547F6928DA7AE500E72E4D /* Logo.png */,
 			);
 			path = Assets;
@@ -216,6 +221,7 @@
 				E7547F3A28DA76C700E72E4D /* ViewController.swift */,
 				E717453B28DB495F004468F6 /* HomeViewController.swift */,
 				E717453D28DB5C73004468F6 /* MapViewController.swift */,
+				E79D350428DC7553009E6752 /* InicioViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -332,6 +338,7 @@
 				E7547F4328DA76CA00E72E4D /* LaunchScreen.storyboard in Resources */,
 				E7547F6728DA77AA00E72E4D /* GoogleService-Info.plist in Resources */,
 				E7547F6A28DA7AE500E72E4D /* Logo.png in Resources */,
+				E79D350728DC7860009E6752 /* profile.jpeg in Resources */,
 				E7547F4028DA76CA00E72E4D /* Assets.xcassets in Resources */,
 				E7547F3E28DA76C700E72E4D /* Main.storyboard in Resources */,
 			);
@@ -462,6 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E717454028DB6338004468F6 /* MapModel.swift in Sources */,
+				E79D350528DC7553009E6752 /* InicioViewController.swift in Sources */,
 				E7547F6D28DA7F6B00E72E4D /* User.swift in Sources */,
 				E7547F3B28DA76C700E72E4D /* ViewController.swift in Sources */,
 				E7547F7628DAA7A100E72E4D /* FirebaseViewModel.swift in Sources */,
