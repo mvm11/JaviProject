@@ -12,31 +12,35 @@ class CollectionViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
-        collectionView.dataSource = self
+        configureDelegates()
+        configureSlider()
         super.viewDidLoad()
         parseJSON(){result in
             self.characters = result
             self.collectionView.reloadData()
         }
+
         self.tabBarController?.tabBar.isHidden = true
-        collectionView?.collectionViewLayout.invalidateLayout()
-        let duration: TimeInterval = 0.3
-        UIView.animate(withDuration: duration, animations: {
-            self.collectionView.collectionViewLayout.invalidateLayout()
-        })
+       
+    }
+        
+    
+    func configureDelegates(){
+        collectionView.dataSource = self
+        collectionView.delegate = self
         
     }
     
     func configureSlider() {
-        uiSlider.center = self.view.center
-        // minimum number of rows required
-        uiSlider.minimumValue = 1
-        // maximum number of rows required
-        uiSlider.maximumValue = 3
-        uiSlider.isContinuous = true
-        uiSlider.addTarget(self, action: #selector(sliderValueChanged(_:)), for: .valueChanged)
-        self.view.addSubview(uiSlider)
-        numberOfItemsPerRow = Int(uiSlider.value)
+            // minimum number of rows required
+            uiSlider.minimumValue = 1
+            // maximum number of rows required
+            uiSlider.maximumValue = 10
+            uiSlider.value = 1
+            uiSlider.isContinuous = true
+            uiSlider.addTarget(self, action: #selector(sliderValueChanged(_:)), for: .valueChanged)
+            self.view.addSubview(uiSlider)
+            numberOfItemsPerRow = Int(uiSlider.value)
     }
     
     @objc func sliderValueChanged(_ sender:UISlider!) {
@@ -44,6 +48,13 @@ class CollectionViewController: UIViewController {
             self.collectionView.reloadData()
         }
     
+    }
+    
+    
+    @IBAction func updateCell(_ sender: Any) {
+        print("Soy el value:  \(uiSlider.value)")
+        print("Soy el tag:  \(uiSlider.tag)")
+        print("Soy el sizeToFit:  \(uiSlider.sizeToFit())")
     }
     
     func parseJSON(completion: @escaping([Model])-> Void) {
@@ -63,7 +74,7 @@ class CollectionViewController: UIViewController {
     }
 
 }
-extension CollectionViewController : UICollectionViewDataSource, UICollectionViewDelegate,  UICollectionViewDelegateFlowLayout{
+extension CollectionViewController : UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
    
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -83,11 +94,9 @@ extension CollectionViewController : UICollectionViewDataSource, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 1.00, height: 100.0)
-       }
-    
-    
-    
+        let width = (self.view.frame.width)/CGFloat(uiSlider.value)
+        return CGSize(width: width, height: width)
+    }
     
 }
     extension UIImageView {

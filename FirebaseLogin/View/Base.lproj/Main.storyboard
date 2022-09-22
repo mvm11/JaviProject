@@ -208,16 +208,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="v2d-FM-yG2">
-                                <rect key="frame" x="18" y="100" width="378" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="2jL-wK-YG1"/>
-                                    <constraint firstAttribute="height" constant="30" id="GDn-rj-SPj"/>
-                                </constraints>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="uLG-iq-Fhf">
+                                <rect key="frame" x="-2" y="133" width="418" height="30"/>
+                                <connections>
+                                    <action selector="updateCell:" destination="j25-Nd-HXX" eventType="valueChanged" id="dwg-3J-lmV"/>
+                                </connections>
                             </slider>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5rc-Vj-dn2">
-                                <rect key="frame" x="0.0" y="158" width="414" height="738"/>
+                                <rect key="frame" x="0.0" y="191" width="414" height="622"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="622" id="Zec-oi-8oz"/>
+                                    <constraint firstAttribute="width" constant="414" id="b3N-aH-fAv"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tef-K4-jLS">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -253,19 +256,19 @@
                         <viewLayoutGuide key="safeArea" id="NwQ-Jf-mWz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="5rc-Vj-dn2" firstAttribute="top" secondItem="v2d-FM-yG2" secondAttribute="bottom" constant="28" id="DcT-P7-1hb"/>
-                            <constraint firstItem="NwQ-Jf-mWz" firstAttribute="trailing" secondItem="5rc-Vj-dn2" secondAttribute="trailing" id="SE6-CC-sSb"/>
-                            <constraint firstItem="5rc-Vj-dn2" firstAttribute="leading" secondItem="NwQ-Jf-mWz" secondAttribute="leading" id="ZpK-QK-BH6"/>
-                            <constraint firstAttribute="bottom" secondItem="5rc-Vj-dn2" secondAttribute="bottom" id="bFY-fh-DUf"/>
-                            <constraint firstItem="NwQ-Jf-mWz" firstAttribute="trailing" secondItem="v2d-FM-yG2" secondAttribute="trailing" constant="20" id="jUk-0t-2zx"/>
-                            <constraint firstItem="v2d-FM-yG2" firstAttribute="top" secondItem="NwQ-Jf-mWz" secondAttribute="top" constant="12" id="kVO-dS-VSv"/>
-                            <constraint firstItem="v2d-FM-yG2" firstAttribute="leading" secondItem="NwQ-Jf-mWz" secondAttribute="leading" constant="20" id="moa-wI-luR"/>
+                            <constraint firstItem="5rc-Vj-dn2" firstAttribute="leading" secondItem="NwQ-Jf-mWz" secondAttribute="leading" id="2Vx-iA-CYR"/>
+                            <constraint firstItem="NwQ-Jf-mWz" firstAttribute="trailing" secondItem="5rc-Vj-dn2" secondAttribute="trailing" id="J0Q-gm-6wi"/>
+                            <constraint firstItem="5rc-Vj-dn2" firstAttribute="top" secondItem="uLG-iq-Fhf" secondAttribute="bottom" constant="29" id="RnK-yw-daw"/>
+                            <constraint firstItem="uLG-iq-Fhf" firstAttribute="leading" secondItem="5rc-Vj-dn2" secondAttribute="leading" id="Z4k-69-CvF"/>
+                            <constraint firstItem="NwQ-Jf-mWz" firstAttribute="bottom" secondItem="5rc-Vj-dn2" secondAttribute="bottom" id="dzR-cW-eqq"/>
+                            <constraint firstItem="uLG-iq-Fhf" firstAttribute="trailing" secondItem="5rc-Vj-dn2" secondAttribute="trailing" id="f66-NG-eCO"/>
+                            <constraint firstItem="uLG-iq-Fhf" firstAttribute="top" secondItem="NwQ-Jf-mWz" secondAttribute="top" constant="45" id="ica-x6-5zR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Gu0-9J-iWs"/>
                     <connections>
                         <outlet property="collectionView" destination="5rc-Vj-dn2" id="3Ly-Be-EkH"/>
-                        <outlet property="uiSlider" destination="v2d-FM-yG2" id="758-OV-17D"/>
+                        <outlet property="uiSlider" destination="uLG-iq-Fhf" id="qrN-tN-I3z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLb-K3-ndZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
