@@ -67,6 +67,13 @@ class ViewController: UIViewController, UIWindowSceneDelegate {
     }
     
     
+    fileprivate func navigateToHomeViewController() {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let homeViewController = storyBoard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        homeViewController.modalPresentationStyle = .fullScreen
+        self.present(homeViewController, animated: true, completion: nil)
+    }
+    
     fileprivate func validateUserLogin(_ error: Error?, _ result: AuthDataResult?) {
         switch error {
         case .some(let error as NSError) where error.code == AuthErrorCode.wrongPassword.rawValue:
@@ -84,12 +91,7 @@ class ViewController: UIViewController, UIWindowSceneDelegate {
         case .none:
             if (result?.user) != nil {
                 self.hideActivityIndicatorView()
-                self.navigationController?.pushViewController(HomeViewController(), animated: true)
-                
-                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController; self.present(nextViewController, animated: true, completion: nil)
-                
-                //self.navegateToNextController(id: "goToHomeViewController")
+                navigateToHomeViewController()
             }
         }
     }

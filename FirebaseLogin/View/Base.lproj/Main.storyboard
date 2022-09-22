@@ -6,6 +6,7 @@
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -83,7 +84,7 @@
             </objects>
             <point key="canvasLocation" x="882.60869565217399" y="49.553571428571423"/>
         </scene>
-        <!--Inicio-->
+        <!--Inicio View Controller-->
         <scene sceneID="cqj-cj-RfK">
             <objects>
                 <viewController storyboardIdentifier="InicioViewController" id="LRB-bK-0Wp" customClass="InicioViewController" customModule="FirebaseLogin" customModuleProvider="target" sceneMemberID="viewController">
@@ -144,6 +145,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" image="paperplane.fill" catalog="system" title="Galeria"/>
+                                        <connections>
+                                            <segue destination="SCo-3P-20b" kind="show" id="jhy-6c-KM2"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ugk-YN-kIg">
                                         <rect key="frame" x="158" y="0.0" width="212" height="40"/>
@@ -153,6 +157,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" image="paperplane.fill" catalog="system" title="CollectionView"/>
+                                        <connections>
+                                            <segue destination="j25-Nd-HXX" kind="show" id="Yls-BA-XWA"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -184,14 +191,135 @@
                             <constraint firstItem="hmL-hX-OI1" firstAttribute="leading" secondItem="GlN-JB-UtA" secondAttribute="leading" constant="20" id="tG7-Ot-V97"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Inicio" image="scribble.variable" catalog="system" id="WQT-AI-EdK"/>
+                    <navigationItem key="navigationItem" id="yos-3W-WH7"/>
                     <connections>
                         <outlet property="image" destination="LBn-bS-MJX" id="JLL-eZ-lm5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0jT-Tz-gBp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2549.275362318841" y="-246.42857142857142"/>
+            <point key="canvasLocation" x="3459.420289855073" y="-246.42857142857142"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="eJ6-hO-fl5">
+            <objects>
+                <viewController storyboardIdentifier="CollectionViewController" id="j25-Nd-HXX" customClass="CollectionViewController" customModule="FirebaseLogin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9I4-Is-9qa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="v2d-FM-yG2">
+                                <rect key="frame" x="18" y="100" width="378" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="2jL-wK-YG1"/>
+                                    <constraint firstAttribute="height" constant="30" id="GDn-rj-SPj"/>
+                                </constraints>
+                            </slider>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5rc-Vj-dn2">
+                                <rect key="frame" x="0.0" y="158" width="414" height="738"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tef-K4-jLS">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CustomCollectionViewCell" reuseIdentifier="cell" id="Z2G-Nj-U9s" customClass="CustomCollectionViewCell" customModule="FirebaseLogin" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="V99-ho-T3m">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cnI-G6-5N0">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="cnI-G6-5N0" secondAttribute="trailing" id="0mp-0o-gNr"/>
+                                                <constraint firstItem="cnI-G6-5N0" firstAttribute="top" secondItem="V99-ho-T3m" secondAttribute="top" id="SDp-ar-rWl"/>
+                                                <constraint firstAttribute="bottom" secondItem="cnI-G6-5N0" secondAttribute="bottom" id="o7l-h8-mYx"/>
+                                                <constraint firstItem="cnI-G6-5N0" firstAttribute="leading" secondItem="V99-ho-T3m" secondAttribute="leading" id="s7L-TC-C1Y"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="apiImage" destination="cnI-G6-5N0" id="yQx-az-OaC"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NwQ-Jf-mWz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5rc-Vj-dn2" firstAttribute="top" secondItem="v2d-FM-yG2" secondAttribute="bottom" constant="28" id="DcT-P7-1hb"/>
+                            <constraint firstItem="NwQ-Jf-mWz" firstAttribute="trailing" secondItem="5rc-Vj-dn2" secondAttribute="trailing" id="SE6-CC-sSb"/>
+                            <constraint firstItem="5rc-Vj-dn2" firstAttribute="leading" secondItem="NwQ-Jf-mWz" secondAttribute="leading" id="ZpK-QK-BH6"/>
+                            <constraint firstAttribute="bottom" secondItem="5rc-Vj-dn2" secondAttribute="bottom" id="bFY-fh-DUf"/>
+                            <constraint firstItem="NwQ-Jf-mWz" firstAttribute="trailing" secondItem="v2d-FM-yG2" secondAttribute="trailing" constant="20" id="jUk-0t-2zx"/>
+                            <constraint firstItem="v2d-FM-yG2" firstAttribute="top" secondItem="NwQ-Jf-mWz" secondAttribute="top" constant="12" id="kVO-dS-VSv"/>
+                            <constraint firstItem="v2d-FM-yG2" firstAttribute="leading" secondItem="NwQ-Jf-mWz" secondAttribute="leading" constant="20" id="moa-wI-luR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Gu0-9J-iWs"/>
+                    <connections>
+                        <outlet property="collectionView" destination="5rc-Vj-dn2" id="3Ly-Be-EkH"/>
+                        <outlet property="uiSlider" destination="v2d-FM-yG2" id="758-OV-17D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SLb-K3-ndZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4595.652173913044" y="-320.08928571428572"/>
+        </scene>
+        <!--Gallery View Controller-->
+        <scene sceneID="Jfw-g1-zaM">
+            <objects>
+                <viewController storyboardIdentifier="GalleryViewController" id="SCo-3P-20b" customClass="GalleryViewController" customModule="FirebaseLogin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gc0-6l-Le1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chv-TA-9kd">
+                                <rect key="frame" x="118" y="452" width="178" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="ISU-2v-N9G"/>
+                                    <constraint firstAttribute="width" constant="178" id="Ovo-DR-Zsk"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="paperplane.fill" catalog="system" title="Seleccionar foto"/>
+                                <connections>
+                                    <action selector="selectPhoto:" destination="SCo-3P-20b" eventType="touchUpInside" id="NfO-DF-hOa"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dWX-uR-cIa">
+                                <rect key="frame" x="76" y="212" width="263" height="193"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="193" id="Edx-7F-Pr8"/>
+                                    <constraint firstAttribute="width" constant="263" id="MXa-jt-yR6"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Tpl-Oj-xBv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dWX-uR-cIa" firstAttribute="leading" secondItem="Tpl-Oj-xBv" secondAttribute="leading" constant="76" id="8jU-qg-vt5"/>
+                            <constraint firstItem="Tpl-Oj-xBv" firstAttribute="trailing" secondItem="chv-TA-9kd" secondAttribute="trailing" constant="118" id="LTH-Xd-hxT"/>
+                            <constraint firstItem="Tpl-Oj-xBv" firstAttribute="trailing" secondItem="dWX-uR-cIa" secondAttribute="trailing" constant="75" id="bIb-bC-gGz"/>
+                            <constraint firstItem="dWX-uR-cIa" firstAttribute="top" secondItem="Tpl-Oj-xBv" secondAttribute="top" constant="124" id="gHo-3M-Wsg"/>
+                            <constraint firstItem="chv-TA-9kd" firstAttribute="leading" secondItem="Tpl-Oj-xBv" secondAttribute="leading" constant="118" id="rgS-si-FRK"/>
+                            <constraint firstItem="chv-TA-9kd" firstAttribute="top" secondItem="dWX-uR-cIa" secondAttribute="bottom" constant="47" id="tgK-XQ-xT4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fZz-9v-l0P"/>
+                    <connections>
+                        <outlet property="imageView" destination="dWX-uR-cIa" id="AfO-ng-OuE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z1C-R0-YvM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4595.652173913044" y="475.44642857142856"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="cXn-y0-A6F">
@@ -206,7 +334,7 @@
                         <imageReference key="backgroundImage" image="scribble.variable" catalog="system" symbolScale="medium"/>
                     </tabBar>
                     <connections>
-                        <segue destination="LRB-bK-0Wp" kind="relationship" relationship="viewControllers" id="YmV-Uu-Nbd"/>
+                        <segue destination="HYV-QK-XHk" kind="relationship" relationship="viewControllers" id="YmV-Uu-Nbd"/>
                         <segue destination="hVN-si-Nfb" kind="relationship" relationship="viewControllers" id="3xU-fY-KKn"/>
                     </connections>
                 </tabBarController>
@@ -248,6 +376,25 @@
             </objects>
             <point key="canvasLocation" x="-27.536231884057973" y="49.553571428571423"/>
         </scene>
+        <!--Inicio-->
+        <scene sceneID="hHG-WP-RYh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HYV-QK-XHk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Inicio" image="scribble.variable" catalog="system" id="WQT-AI-EdK"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jZX-Sp-Tg5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LRB-bK-0Wp" kind="relationship" relationship="rootViewController" id="3af-nD-dYP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SBa-my-s3d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2549.275362318841" y="-246.42857142857142"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Logo.png" width="110" height="95"/>
@@ -259,6 +406,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

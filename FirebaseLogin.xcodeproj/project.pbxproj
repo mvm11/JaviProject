@@ -12,7 +12,7 @@
 		C92FE32E62456919B4719394 /* Pods_FirebaseLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED385751F3810CC68FF6118 /* Pods_FirebaseLogin.framework */; };
 		E717453C28DB495F004468F6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E717453B28DB495F004468F6 /* HomeViewController.swift */; };
 		E717453E28DB5C73004468F6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E717453D28DB5C73004468F6 /* MapViewController.swift */; };
-		E717454028DB6338004468F6 /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E717453F28DB6338004468F6 /* MapModel.swift */; };
+		E74109A728DCC7B500F851C3 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74109A628DCC7B500F851C3 /* CustomCollectionViewCell.swift */; };
 		E7547F3728DA76C700E72E4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7547F3628DA76C700E72E4D /* AppDelegate.swift */; };
 		E7547F3928DA76C700E72E4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7547F3828DA76C700E72E4D /* SceneDelegate.swift */; };
 		E7547F3B28DA76C700E72E4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7547F3A28DA76C700E72E4D /* ViewController.swift */; };
@@ -28,6 +28,10 @@
 		E7547F7628DAA7A100E72E4D /* FirebaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7547F7528DAA7A100E72E4D /* FirebaseViewModel.swift */; };
 		E79D350528DC7553009E6752 /* InicioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D350428DC7553009E6752 /* InicioViewController.swift */; };
 		E79D350728DC7860009E6752 /* profile.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E79D350628DC785F009E6752 /* profile.jpeg */; };
+		E79D350928DC879E009E6752 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D350828DC879E009E6752 /* CollectionViewController.swift */; };
+		E79D350B28DC9AA9009E6752 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D350A28DC9AA9009E6752 /* Character.swift */; };
+		E79D350D28DC9B1F009E6752 /* api.json in Resources */ = {isa = PBXBuildFile; fileRef = E79D350C28DC9B1F009E6752 /* api.json */; };
+		E79D350F28DCA1BF009E6752 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D350E28DCA1BF009E6752 /* GalleryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +62,7 @@
 		DED385751F3810CC68FF6118 /* Pods_FirebaseLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E717453B28DB495F004468F6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E717453D28DB5C73004468F6 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		E717453F28DB6338004468F6 /* MapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
+		E74109A628DCC7B500F851C3 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		E7547F3328DA76C700E72E4D /* FirebaseLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7547F3628DA76C700E72E4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7547F3828DA76C700E72E4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,10 @@
 		E7547F7528DAA7A100E72E4D /* FirebaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseViewModel.swift; sourceTree = "<group>"; };
 		E79D350428DC7553009E6752 /* InicioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioViewController.swift; sourceTree = "<group>"; };
 		E79D350628DC785F009E6752 /* profile.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = profile.jpeg; path = ../../../profile.jpeg; sourceTree = "<group>"; };
+		E79D350828DC879E009E6752 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		E79D350A28DC9AA9009E6752 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		E79D350C28DC9B1F009E6752 /* api.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = api.json; sourceTree = "<group>"; };
+		E79D350E28DCA1BF009E6752 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		EAB2156EC04E701A6075CBBC /* Pods-FirebaseLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseLogin.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseLogin/Pods-FirebaseLogin.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +138,54 @@
 				29FDD111FB5482F7D8915D7C /* Pods-FirebaseLoginTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E74109A828DCE05900F851C3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E717453B28DB495F004468F6 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E74109A928DCE43D00F851C3 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				E717453D28DB5C73004468F6 /* MapViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		E74109AA28DCE44600F851C3 /* Inicio */ = {
+			isa = PBXGroup;
+			children = (
+				E79D350428DC7553009E6752 /* InicioViewController.swift */,
+			);
+			path = Inicio;
+			sourceTree = "<group>";
+		};
+		E74109AB28DCE44F00F851C3 /* Gellery */ = {
+			isa = PBXGroup;
+			children = (
+				E79D350E28DCA1BF009E6752 /* GalleryViewController.swift */,
+			);
+			path = Gellery;
+			sourceTree = "<group>";
+		};
+		E74109AC28DCE45700F851C3 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				E79D350828DC879E009E6752 /* CollectionViewController.swift */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
+		E74109AD28DCE46000F851C3 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				E74109A628DCC7B500F851C3 /* CustomCollectionViewCell.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 		E7547F2A28DA76C700E72E4D = {
@@ -201,7 +257,8 @@
 			isa = PBXGroup;
 			children = (
 				E7547F6C28DA7F6B00E72E4D /* User.swift */,
-				E717453F28DB6338004468F6 /* MapModel.swift */,
+				E79D350A28DC9AA9009E6752 /* Character.swift */,
+				E79D350C28DC9B1F009E6752 /* api.json */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,11 +274,14 @@
 		E7547F6F28DAA6EA00E72E4D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E74109AD28DCE46000F851C3 /* Custom */,
+				E74109AC28DCE45700F851C3 /* Collection */,
+				E74109AB28DCE44F00F851C3 /* Gellery */,
+				E74109AA28DCE44600F851C3 /* Inicio */,
+				E74109A928DCE43D00F851C3 /* Map */,
+				E74109A828DCE05900F851C3 /* Home */,
 				E7547F3C28DA76C700E72E4D /* Main.storyboard */,
 				E7547F3A28DA76C700E72E4D /* ViewController.swift */,
-				E717453B28DB495F004468F6 /* HomeViewController.swift */,
-				E717453D28DB5C73004468F6 /* MapViewController.swift */,
-				E79D350428DC7553009E6752 /* InicioViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -335,6 +395,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E79D350D28DC9B1F009E6752 /* api.json in Resources */,
 				E7547F4328DA76CA00E72E4D /* LaunchScreen.storyboard in Resources */,
 				E7547F6728DA77AA00E72E4D /* GoogleService-Info.plist in Resources */,
 				E7547F6A28DA7AE500E72E4D /* Logo.png in Resources */,
@@ -468,13 +529,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E717454028DB6338004468F6 /* MapModel.swift in Sources */,
+				E79D350F28DCA1BF009E6752 /* GalleryViewController.swift in Sources */,
 				E79D350528DC7553009E6752 /* InicioViewController.swift in Sources */,
 				E7547F6D28DA7F6B00E72E4D /* User.swift in Sources */,
 				E7547F3B28DA76C700E72E4D /* ViewController.swift in Sources */,
+				E79D350928DC879E009E6752 /* CollectionViewController.swift in Sources */,
 				E7547F7628DAA7A100E72E4D /* FirebaseViewModel.swift in Sources */,
 				E7547F3728DA76C700E72E4D /* AppDelegate.swift in Sources */,
+				E74109A728DCC7B500F851C3 /* CustomCollectionViewCell.swift in Sources */,
 				E7547F3928DA76C700E72E4D /* SceneDelegate.swift in Sources */,
+				E79D350B28DC9AA9009E6752 /* Character.swift in Sources */,
 				E717453C28DB495F004468F6 /* HomeViewController.swift in Sources */,
 				E717453E28DB5C73004468F6 /* MapViewController.swift in Sources */,
 			);
