@@ -8,6 +8,7 @@ target 'FirebaseLogin' do
   # Pods for FirebaseLogin
 pod 'Firebase/Auth'
 pod 'Alamofire'
+pod 'AlamofireImage', '~> 4.1'
 
   target 'FirebaseLoginTests' do
     inherit! :search_paths

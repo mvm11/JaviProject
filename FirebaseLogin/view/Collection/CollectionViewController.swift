@@ -5,7 +5,7 @@ import WebKit
 class CollectionViewController: UIViewController {
   
     var numberOfItemsPerRow:Int = 4
-    var characters = [Model]()
+    var characters = [Character]()
     
     @IBOutlet weak var uiSlider: UISlider!
     
@@ -35,7 +35,7 @@ class CollectionViewController: UIViewController {
             // minimum number of rows required
             uiSlider.minimumValue = 1
             // maximum number of rows required
-            uiSlider.maximumValue = 10
+            uiSlider.maximumValue = 4
             uiSlider.value = 1
             uiSlider.isContinuous = true
             uiSlider.addTarget(self, action: #selector(sliderValueChanged(_:)), for: .valueChanged)
@@ -57,7 +57,7 @@ class CollectionViewController: UIViewController {
         print("Soy el sizeToFit:  \(uiSlider.sizeToFit())")
     }
     
-    func parseJSON(completion: @escaping([Model])-> Void) {
+    func parseJSON(completion: @escaping([Character])-> Void) {
         guard let path = Bundle.main.url(forResource: "api", withExtension: "json")else{
             fatalError("Could not find json file")}
         
@@ -66,7 +66,7 @@ class CollectionViewController: UIViewController {
         }
         
         let decoder = JSONDecoder()
-        guard let characters = try? decoder.decode([Model].self, from: dataJson)else{
+        guard let characters = try? decoder.decode([Character].self, from: dataJson)else{
             fatalError("There was a problem decoding the data")
         }
         completion(characters)
@@ -84,7 +84,7 @@ extension CollectionViewController : UICollectionViewDataSource, UICollectionVie
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as!
         CustomCollectionViewCell
-        let character:Model?
+        let character:Character?
         character = characters[indexPath.row]
         let string = character!.photo
         let url = URL(string: string)

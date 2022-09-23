@@ -1,9 +1,9 @@
 import Foundation
 
 // MARK: - WelcomeElement
-struct Model: Codable {
+struct Character: Codable {
     let name: String
     let photo: String
 }
 
-typealias Welcome = [Model]
+typealias CharacterList = [Character]

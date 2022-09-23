@@ -25,13 +25,18 @@
 		E7547F6728DA77AA00E72E4D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7547F6628DA77AA00E72E4D /* GoogleService-Info.plist */; };
 		E7547F6A28DA7AE500E72E4D /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E7547F6928DA7AE500E72E4D /* Logo.png */; };
 		E7547F6D28DA7F6B00E72E4D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7547F6C28DA7F6B00E72E4D /* User.swift */; };
-		E7547F7628DAA7A100E72E4D /* FirebaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7547F7528DAA7A100E72E4D /* FirebaseViewModel.swift */; };
+		E7547F7628DAA7A100E72E4D /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7547F7528DAA7A100E72E4D /* MoviesViewModel.swift */; };
 		E79D350528DC7553009E6752 /* InicioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D350428DC7553009E6752 /* InicioViewController.swift */; };
-		E79D350728DC7860009E6752 /* profile.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E79D350628DC785F009E6752 /* profile.jpeg */; };
 		E79D350928DC879E009E6752 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D350828DC879E009E6752 /* CollectionViewController.swift */; };
 		E79D350B28DC9AA9009E6752 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D350A28DC9AA9009E6752 /* Character.swift */; };
 		E79D350D28DC9B1F009E6752 /* api.json in Resources */ = {isa = PBXBuildFile; fileRef = E79D350C28DC9B1F009E6752 /* api.json */; };
 		E79D350F28DCA1BF009E6752 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D350E28DCA1BF009E6752 /* GalleryViewController.swift */; };
+		E7DDB96628DDE8D50013FB4D /* profile.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E7DDB96528DDE8D50013FB4D /* profile.jpeg */; };
+		E7DDB96928DDF0AD0013FB4D /* WebUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DDB96828DDF0AD0013FB4D /* WebUIViewController.swift */; };
+		E7DDB96D28DDFF5B0013FB4D /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DDB96C28DDFF5B0013FB4D /* MovieService.swift */; };
+		E7DDB97228DE090B0013FB4D /* CustomMovieViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DDB97028DE090B0013FB4D /* CustomMovieViewCell.swift */; };
+		E7DDB97328DE090B0013FB4D /* CustomMovieViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7DDB97128DE090B0013FB4D /* CustomMovieViewCell.xib */; };
+		E7DDB97528DE183D0013FB4D /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DDB97428DE183D0013FB4D /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,13 +84,18 @@
 		E7547F6628DA77AA00E72E4D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E7547F6928DA7AE500E72E4D /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = ../../../Logo.png; sourceTree = "<group>"; };
 		E7547F6C28DA7F6B00E72E4D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		E7547F7528DAA7A100E72E4D /* FirebaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseViewModel.swift; sourceTree = "<group>"; };
+		E7547F7528DAA7A100E72E4D /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
 		E79D350428DC7553009E6752 /* InicioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioViewController.swift; sourceTree = "<group>"; };
-		E79D350628DC785F009E6752 /* profile.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = profile.jpeg; path = ../../../profile.jpeg; sourceTree = "<group>"; };
 		E79D350828DC879E009E6752 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		E79D350A28DC9AA9009E6752 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		E79D350C28DC9B1F009E6752 /* api.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = api.json; sourceTree = "<group>"; };
 		E79D350E28DCA1BF009E6752 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		E7DDB96528DDE8D50013FB4D /* profile.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = profile.jpeg; path = ../Model/profile.jpeg; sourceTree = "<group>"; };
+		E7DDB96828DDF0AD0013FB4D /* WebUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebUIViewController.swift; sourceTree = "<group>"; };
+		E7DDB96C28DDFF5B0013FB4D /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
+		E7DDB97028DE090B0013FB4D /* CustomMovieViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMovieViewCell.swift; sourceTree = "<group>"; };
+		E7DDB97128DE090B0013FB4D /* CustomMovieViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomMovieViewCell.xib; sourceTree = "<group>"; };
+		E7DDB97428DE183D0013FB4D /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		EAB2156EC04E701A6075CBBC /* Pods-FirebaseLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseLogin.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseLogin/Pods-FirebaseLogin.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -213,16 +223,17 @@
 		E7547F3528DA76C700E72E4D /* FirebaseLogin */ = {
 			isa = PBXGroup;
 			children = (
-				E7547F6F28DAA6EA00E72E4D /* View */,
-				E7547F6E28DA800D00E72E4D /* ViewModel */,
-				E7547F6B28DA7F5F00E72E4D /* Model */,
-				E7547F6828DA7A5000E72E4D /* Assets */,
-				E7547F6628DA77AA00E72E4D /* GoogleService-Info.plist */,
 				E7547F3628DA76C700E72E4D /* AppDelegate.swift */,
-				E7547F3828DA76C700E72E4D /* SceneDelegate.swift */,
+				E7547F6828DA7A5000E72E4D /* assets */,
 				E7547F3F28DA76CA00E72E4D /* Assets.xcassets */,
-				E7547F4128DA76CA00E72E4D /* LaunchScreen.storyboard */,
+				E7547F6628DA77AA00E72E4D /* GoogleService-Info.plist */,
 				E7547F4428DA76CA00E72E4D /* Info.plist */,
+				E7547F4128DA76CA00E72E4D /* LaunchScreen.storyboard */,
+				E7547F6B28DA7F5F00E72E4D /* model */,
+				E7547F3828DA76C700E72E4D /* SceneDelegate.swift */,
+				E7DDB96B28DDFEC10013FB4D /* service */,
+				E7547F6F28DAA6EA00E72E4D /* view */,
+				E7547F6E28DA800D00E72E4D /* viewmodel */,
 			);
 			path = FirebaseLogin;
 			sourceTree = "<group>";
@@ -244,36 +255,38 @@
 			path = FirebaseLoginUITests;
 			sourceTree = "<group>";
 		};
-		E7547F6828DA7A5000E72E4D /* Assets */ = {
+		E7547F6828DA7A5000E72E4D /* assets */ = {
 			isa = PBXGroup;
 			children = (
-				E79D350628DC785F009E6752 /* profile.jpeg */,
+				E7DDB96528DDE8D50013FB4D /* profile.jpeg */,
 				E7547F6928DA7AE500E72E4D /* Logo.png */,
 			);
-			path = Assets;
+			path = assets;
 			sourceTree = "<group>";
 		};
-		E7547F6B28DA7F5F00E72E4D /* Model */ = {
+		E7547F6B28DA7F5F00E72E4D /* model */ = {
 			isa = PBXGroup;
 			children = (
 				E7547F6C28DA7F6B00E72E4D /* User.swift */,
 				E79D350A28DC9AA9009E6752 /* Character.swift */,
 				E79D350C28DC9B1F009E6752 /* api.json */,
+				E7DDB97428DE183D0013FB4D /* Movie.swift */,
 			);
-			path = Model;
+			path = model;
 			sourceTree = "<group>";
 		};
-		E7547F6E28DA800D00E72E4D /* ViewModel */ = {
+		E7547F6E28DA800D00E72E4D /* viewmodel */ = {
 			isa = PBXGroup;
 			children = (
-				E7547F7528DAA7A100E72E4D /* FirebaseViewModel.swift */,
+				E7547F7528DAA7A100E72E4D /* MoviesViewModel.swift */,
 			);
-			path = ViewModel;
+			path = viewmodel;
 			sourceTree = "<group>";
 		};
-		E7547F6F28DAA6EA00E72E4D /* View */ = {
+		E7547F6F28DAA6EA00E72E4D /* view */ = {
 			isa = PBXGroup;
 			children = (
+				E7DDB96728DDF0740013FB4D /* Web */,
 				E74109AD28DCE46000F851C3 /* Custom */,
 				E74109AC28DCE45700F851C3 /* Collection */,
 				E74109AB28DCE44F00F851C3 /* Gellery */,
@@ -282,8 +295,26 @@
 				E74109A828DCE05900F851C3 /* Home */,
 				E7547F3C28DA76C700E72E4D /* Main.storyboard */,
 				E7547F3A28DA76C700E72E4D /* ViewController.swift */,
+				E7DDB97028DE090B0013FB4D /* CustomMovieViewCell.swift */,
+				E7DDB97128DE090B0013FB4D /* CustomMovieViewCell.xib */,
 			);
-			path = View;
+			path = view;
+			sourceTree = "<group>";
+		};
+		E7DDB96728DDF0740013FB4D /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				E7DDB96828DDF0AD0013FB4D /* WebUIViewController.swift */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
+		E7DDB96B28DDFEC10013FB4D /* service */ = {
+			isa = PBXGroup;
+			children = (
+				E7DDB96C28DDFF5B0013FB4D /* MovieService.swift */,
+			);
+			path = service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,11 +427,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E79D350D28DC9B1F009E6752 /* api.json in Resources */,
+				E7DDB96628DDE8D50013FB4D /* profile.jpeg in Resources */,
 				E7547F4328DA76CA00E72E4D /* LaunchScreen.storyboard in Resources */,
 				E7547F6728DA77AA00E72E4D /* GoogleService-Info.plist in Resources */,
 				E7547F6A28DA7AE500E72E4D /* Logo.png in Resources */,
-				E79D350728DC7860009E6752 /* profile.jpeg in Resources */,
 				E7547F4028DA76CA00E72E4D /* Assets.xcassets in Resources */,
+				E7DDB97328DE090B0013FB4D /* CustomMovieViewCell.xib in Resources */,
 				E7547F3E28DA76C700E72E4D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -531,12 +563,16 @@
 			files = (
 				E79D350F28DCA1BF009E6752 /* GalleryViewController.swift in Sources */,
 				E79D350528DC7553009E6752 /* InicioViewController.swift in Sources */,
+				E7DDB96D28DDFF5B0013FB4D /* MovieService.swift in Sources */,
 				E7547F6D28DA7F6B00E72E4D /* User.swift in Sources */,
 				E7547F3B28DA76C700E72E4D /* ViewController.swift in Sources */,
 				E79D350928DC879E009E6752 /* CollectionViewController.swift in Sources */,
-				E7547F7628DAA7A100E72E4D /* FirebaseViewModel.swift in Sources */,
+				E7DDB97528DE183D0013FB4D /* Movie.swift in Sources */,
+				E7547F7628DAA7A100E72E4D /* MoviesViewModel.swift in Sources */,
+				E7DDB96928DDF0AD0013FB4D /* WebUIViewController.swift in Sources */,
 				E7547F3728DA76C700E72E4D /* AppDelegate.swift in Sources */,
 				E74109A728DCC7B500F851C3 /* CustomCollectionViewCell.swift in Sources */,
+				E7DDB97228DE090B0013FB4D /* CustomMovieViewCell.swift in Sources */,
 				E7547F3928DA76C700E72E4D /* SceneDelegate.swift in Sources */,
 				E79D350B28DC9AA9009E6752 /* Character.swift in Sources */,
 				E717453C28DB495F004468F6 /* HomeViewController.swift in Sources */,
