@@ -23,9 +23,11 @@
 		E7547F5828DA76CA00E72E4D /* FirebaseLoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7547F5728DA76CA00E72E4D /* FirebaseLoginUITests.swift */; };
 		E7547F5A28DA76CA00E72E4D /* FirebaseLoginUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7547F5928DA76CA00E72E4D /* FirebaseLoginUITestsLaunchTests.swift */; };
 		E7547F6728DA77AA00E72E4D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7547F6628DA77AA00E72E4D /* GoogleService-Info.plist */; };
-		E7547F6A28DA7AE500E72E4D /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E7547F6928DA7AE500E72E4D /* Logo.png */; };
 		E7547F6D28DA7F6B00E72E4D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7547F6C28DA7F6B00E72E4D /* User.swift */; };
 		E7547F7628DAA7A100E72E4D /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7547F7528DAA7A100E72E4D /* MoviesViewModel.swift */; };
+		E7638CDC28DFD48800181222 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7638CDA28DFD48800181222 /* MovieCollectionViewCell.swift */; };
+		E7638CDD28DFD48800181222 /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7638CDB28DFD48800181222 /* MovieCollectionViewCell.xib */; };
+		E7638CE328DFF7C900181222 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E7638CE228DFF7C900181222 /* Logo.png */; };
 		E79D350528DC7553009E6752 /* InicioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D350428DC7553009E6752 /* InicioViewController.swift */; };
 		E79D350928DC879E009E6752 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D350828DC879E009E6752 /* CollectionViewController.swift */; };
 		E79D350B28DC9AA9009E6752 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D350A28DC9AA9009E6752 /* Character.swift */; };
@@ -82,9 +84,11 @@
 		E7547F5728DA76CA00E72E4D /* FirebaseLoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseLoginUITests.swift; sourceTree = "<group>"; };
 		E7547F5928DA76CA00E72E4D /* FirebaseLoginUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseLoginUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E7547F6628DA77AA00E72E4D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		E7547F6928DA7AE500E72E4D /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = ../../../Logo.png; sourceTree = "<group>"; };
 		E7547F6C28DA7F6B00E72E4D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E7547F7528DAA7A100E72E4D /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
+		E7638CDA28DFD48800181222 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		E7638CDB28DFD48800181222 /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
+		E7638CE228DFF7C900181222 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		E79D350428DC7553009E6752 /* InicioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioViewController.swift; sourceTree = "<group>"; };
 		E79D350828DC879E009E6752 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		E79D350A28DC9AA9009E6752 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
@@ -224,16 +228,14 @@
 			isa = PBXGroup;
 			children = (
 				E7547F3628DA76C700E72E4D /* AppDelegate.swift */,
-				E7547F6828DA7A5000E72E4D /* assets */,
 				E7547F3F28DA76CA00E72E4D /* Assets.xcassets */,
 				E7547F6628DA77AA00E72E4D /* GoogleService-Info.plist */,
 				E7547F4428DA76CA00E72E4D /* Info.plist */,
 				E7547F4128DA76CA00E72E4D /* LaunchScreen.storyboard */,
-				E7547F6B28DA7F5F00E72E4D /* model */,
+				E7638CDA28DFD48800181222 /* MovieCollectionViewCell.swift */,
+				E7638CDB28DFD48800181222 /* MovieCollectionViewCell.xib */,
+				E7638CDE28DFF19400181222 /* ProjectApp */,
 				E7547F3828DA76C700E72E4D /* SceneDelegate.swift */,
-				E7DDB96B28DDFEC10013FB4D /* service */,
-				E7547F6F28DAA6EA00E72E4D /* view */,
-				E7547F6E28DA800D00E72E4D /* viewmodel */,
 			);
 			path = FirebaseLogin;
 			sourceTree = "<group>";
@@ -258,8 +260,8 @@
 		E7547F6828DA7A5000E72E4D /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				E7638CE228DFF7C900181222 /* Logo.png */,
 				E7DDB96528DDE8D50013FB4D /* profile.jpeg */,
-				E7547F6928DA7AE500E72E4D /* Logo.png */,
 			);
 			path = assets;
 			sourceTree = "<group>";
@@ -299,6 +301,26 @@
 				E7DDB97128DE090B0013FB4D /* CustomMovieViewCell.xib */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		E7638CDE28DFF19400181222 /* ProjectApp */ = {
+			isa = PBXGroup;
+			children = (
+				E7638CDF28DFF22700181222 /* helpers */,
+				E7547F6E28DA800D00E72E4D /* viewmodel */,
+				E7547F6F28DAA6EA00E72E4D /* view */,
+				E7DDB96B28DDFEC10013FB4D /* service */,
+				E7547F6828DA7A5000E72E4D /* assets */,
+				E7547F6B28DA7F5F00E72E4D /* model */,
+			);
+			path = ProjectApp;
+			sourceTree = "<group>";
+		};
+		E7638CDF28DFF22700181222 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = helpers;
 			sourceTree = "<group>";
 		};
 		E7DDB96728DDF0740013FB4D /* Web */ = {
@@ -428,9 +450,10 @@
 			files = (
 				E79D350D28DC9B1F009E6752 /* api.json in Resources */,
 				E7DDB96628DDE8D50013FB4D /* profile.jpeg in Resources */,
+				E7638CE328DFF7C900181222 /* Logo.png in Resources */,
 				E7547F4328DA76CA00E72E4D /* LaunchScreen.storyboard in Resources */,
 				E7547F6728DA77AA00E72E4D /* GoogleService-Info.plist in Resources */,
-				E7547F6A28DA7AE500E72E4D /* Logo.png in Resources */,
+				E7638CDD28DFD48800181222 /* MovieCollectionViewCell.xib in Resources */,
 				E7547F4028DA76CA00E72E4D /* Assets.xcassets in Resources */,
 				E7DDB97328DE090B0013FB4D /* CustomMovieViewCell.xib in Resources */,
 				E7547F3E28DA76C700E72E4D /* Main.storyboard in Resources */,
@@ -561,6 +584,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7638CDC28DFD48800181222 /* MovieCollectionViewCell.swift in Sources */,
 				E79D350F28DCA1BF009E6752 /* GalleryViewController.swift in Sources */,
 				E79D350528DC7553009E6752 /* InicioViewController.swift in Sources */,
 				E7DDB96D28DDFF5B0013FB4D /* MovieService.swift in Sources */,

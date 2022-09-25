@@ -1,7 +1,8 @@
-import Foundation
 import Alamofire
-import UIKit
 import AlamofireImage
+import Foundation
+import UIKit
+
 
 
 class WebService {
@@ -42,5 +43,3 @@ class WebService {
         }
     }
 }
-
-

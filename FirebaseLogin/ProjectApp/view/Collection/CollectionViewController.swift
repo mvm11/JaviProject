@@ -50,9 +50,7 @@ class CollectionViewController: UIViewController {
     
     
     @IBAction func updateCell(_ sender: Any) {
-        print("Soy el value:  \(uiSlider.value)")
-        print("Soy el tag:  \(uiSlider.tag)")
-        print("Soy el sizeToFit:  \(uiSlider.sizeToFit())")
+       
     }
     
     func parseJSON(completion: @escaping([Character])-> Void) {

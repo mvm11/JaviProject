@@ -13,11 +13,24 @@ class InicioViewController: UIViewController {
     
     override func viewDidLoad() {
         setImageAttributes()
+        setActivityIndicator()
         moviesCollectionView.delegate = self
         moviesCollectionView.dataSource = self
-        
+        displayActivityIndicatorView()
         getData()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
+    func setActivityIndicator()->Void{
+        activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
+        activityIndicator.center = view.center
+        activityIndicator.isHidden = true
+        self.view.addSubview(activityIndicator)
     }
     
     
@@ -39,10 +52,7 @@ class InicioViewController: UIViewController {
         }
 
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        self.tabBarController?.tabBar.isHidden = true
-    }
+  
 
     fileprivate func setImageAttributes() {
         image.layer.borderWidth = 1
@@ -52,6 +62,23 @@ class InicioViewController: UIViewController {
         image.clipsToBounds = true
     }
     
+    func displayActivityIndicatorView() -> () {
+        self.view.isUserInteractionEnabled = false
+        self.view.bringSubviewToFront(self.activityIndicator)
+        self.activityIndicator.isHidden = false
+        self.activityIndicator.startAnimating()
+      }
+
+       func hideActivityIndicatorView() -> () {
+         if !self.activityIndicator.isHidden{
+            DispatchQueue.main.async {
+                self.view.isUserInteractionEnabled = true
+                self.activityIndicator.stopAnimating()
+                self.activityIndicator.isHidden = true
+
+            }
+        }
+      }
 }
 
 extension InicioViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
@@ -68,6 +95,9 @@ extension InicioViewController: UICollectionViewDelegate, UICollectionViewDataSo
         WebService(baseUrl: "https://image.tmdb.org/t/p/w500").downloadImages(endPoint: moviesListViewModel.images!) { image in
 //            cell.movieImage.clipsToBounds = true
 //            cell.movieImage.layer.cornerRadius = cell.movieImage.frame.height / 2
+            cell.movieImage.clipsToBounds = true
+            cell.movieImage.layer.cornerRadius = 0.3*cell.movieImage.frame.width
+            cell.movieImage.layer.borderWidth = 3 //Or some other value
             cell.movieImage.contentMode = .scaleAspectFit
             cell.movieImage.image = image
         }
@@ -80,5 +110,10 @@ extension InicioViewController: UICollectionViewDelegate, UICollectionViewDataSo
         
     }
     
-}
+    // Cell Margin
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+            return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        }
 
+    
+}
