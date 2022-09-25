@@ -9,29 +9,29 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="235" id="KGk-i7-Jjw" customClass="CustomMovieViewCell" customModule="FirebaseLogin" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="162" height="235"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="153" id="KGk-i7-Jjw" customClass="CustomMovieViewCell" customModule="FirebaseLogin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="117" height="153"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="162" height="235"/>
+                <rect key="frame" x="0.0" y="0.0" width="117" height="153"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Khb-xL-2Ya">
-                        <rect key="frame" x="14" y="9" width="134" height="217"/>
+                        <rect key="frame" x="0.0" y="0.0" width="117" height="153"/>
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="Khb-xL-2Ya" secondAttribute="trailing" constant="14" id="RCU-rB-SCs"/>
-                    <constraint firstAttribute="bottom" secondItem="Khb-xL-2Ya" secondAttribute="bottom" constant="9" id="hNP-0Y-k7c"/>
-                    <constraint firstItem="Khb-xL-2Ya" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="jwu-yl-jwt"/>
-                    <constraint firstItem="Khb-xL-2Ya" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="zAZ-tu-wH5"/>
+                    <constraint firstItem="Khb-xL-2Ya" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Ggv-3R-0aC"/>
+                    <constraint firstAttribute="trailing" secondItem="Khb-xL-2Ya" secondAttribute="trailing" id="LN2-YP-mpB"/>
+                    <constraint firstItem="Khb-xL-2Ya" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Oyf-Px-jxd"/>
+                    <constraint firstAttribute="bottom" secondItem="Khb-xL-2Ya" secondAttribute="bottom" id="PcX-iU-XHn"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="movieImage" destination="Khb-xL-2Ya" id="ZhD-P1-vha"/>
             </connections>
-            <point key="canvasLocation" x="23.188405797101453" y="126.89732142857142"/>
+            <point key="canvasLocation" x="-9.4202898550724647" y="99.441964285714278"/>
         </tableViewCell>
     </objects>
 </document>

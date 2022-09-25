@@ -6,7 +6,8 @@ struct MoviesListViewModel {
     var moviesList : [Result]
     
     func numberOfRowInSection() -> Int {
-        return self.moviesList.count
+        //return self.moviesList.count
+        return 20
     }
     
     func moviesAtIndex(_ index: Int) -> MoviesViewModel {

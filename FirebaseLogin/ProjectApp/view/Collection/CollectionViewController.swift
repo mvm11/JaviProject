@@ -4,7 +4,6 @@ import WebKit
 
 class CollectionViewController: UIViewController {
   
-    var numberOfItemsPerRow:Int = 4
     var characters = [Character]()
     
     @IBOutlet weak var uiSlider: UISlider!
@@ -40,7 +39,6 @@ class CollectionViewController: UIViewController {
             uiSlider.isContinuous = true
             uiSlider.addTarget(self, action: #selector(sliderValueChanged(_:)), for: .valueChanged)
             self.view.addSubview(uiSlider)
-            numberOfItemsPerRow = Int(uiSlider.value)
     }
     
     @objc func sliderValueChanged(_ sender:UISlider!) {
