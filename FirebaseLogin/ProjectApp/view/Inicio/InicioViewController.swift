@@ -96,8 +96,7 @@ extension InicioViewController: UICollectionViewDelegate, UICollectionViewDataSo
 //            cell.movieImage.clipsToBounds = true
 //            cell.movieImage.layer.cornerRadius = cell.movieImage.frame.height / 2
             cell.movieImage.clipsToBounds = true
-            cell.movieImage.layer.cornerRadius = 0.3*cell.movieImage.frame.width
-            cell.movieImage.layer.borderWidth = 3 //Or some other value
+            cell.movieImage.layer.cornerRadius = 0.1*cell.movieImage.frame.width
             cell.movieImage.contentMode = .scaleAspectFit
             cell.movieImage.image = image
         }
@@ -106,14 +105,7 @@ extension InicioViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (self.view.frame.width)/CGFloat(1.0)
-        return CGSize(width: width, height: width)
+        return CGSize(width: 400, height: 200)
         
     }
-    
-    // Cell Margin
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-            return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        }
-
-    
 }
