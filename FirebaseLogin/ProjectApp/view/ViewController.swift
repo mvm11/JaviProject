@@ -1,7 +1,7 @@
 import UIKit
 import FirebaseAuth
 
-class ViewController: UIViewController, UIWindowSceneDelegate {
+class ViewController: UIViewController {
     
     //MARK: - @IBOutlets
     
@@ -9,8 +9,6 @@ class ViewController: UIViewController, UIWindowSceneDelegate {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var startButton: UIButton!
     
-    var window: UIWindow?
-    var user = User(email: "", password: "")
     var activityIndicator:UIActivityIndicatorView!
    
     
@@ -19,6 +17,14 @@ class ViewController: UIViewController, UIWindowSceneDelegate {
         setDelegates()
         setActivityIndicator()
         startButton.isEnabled = false
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+            if Auth.auth().currentUser != nil {
+                let homeViewController = self.storyboard!.instantiateViewController(identifier: "HomeViewController")
+                self.navigateToHomeViewController(homeViewController)
+            }
     }
     
     func setDelegates()->Void {
@@ -62,45 +68,38 @@ class ViewController: UIViewController, UIWindowSceneDelegate {
         self.present(alertController, animated: true, completion: nil)
     }
     
-    func navegateToNextController(id: String){
-        performSegue(withIdentifier: id, sender: self)
-    }
-    
-    
-    fileprivate func navigateToHomeViewController() {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let homeViewController = storyBoard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-        homeViewController.modalPresentationStyle = .fullScreen
-        self.present(homeViewController, animated: true, completion: nil)
-    }
-    
     fileprivate func validateUserLogin(_ error: Error?, _ result: AuthDataResult?) {
         switch error {
         case .some(let error as NSError) where error.code == AuthErrorCode.wrongPassword.rawValue:
-            self.displayActivityIndicatorView()
             self.showErrorMessage("Contraseña incorrecta")
             self.hideActivityIndicatorView()
         case .some(let error as NSError) where error.code == AuthErrorCode.userNotFound.rawValue:
-            self.displayActivityIndicatorView()
             self.showErrorMessage("Correo incorrecto")
             self.hideActivityIndicatorView()
         case .some(let error):
-            self.displayActivityIndicatorView()
             self.showErrorMessage("Login error: \(error.localizedDescription)")
             self.hideActivityIndicatorView()
         case .none:
             if (result?.user) != nil {
                 self.hideActivityIndicatorView()
-                navigateToHomeViewController()
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let homeViewController = storyboard.instantiateViewController(identifier: "HomeViewController")
+                navigateToHomeViewController(homeViewController)
+                
             }
         }
     }
     
+    internal func navigateToHomeViewController(_ homeViewController: UIViewController) {
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(homeViewController)
+    }
+    
     @IBAction func startButtonAction(_ sender: Any) {
+        self.displayActivityIndicatorView()
         if let email = emailTextField.text, let password = passwordTextField.text{
             Auth.auth().signIn(withEmail: email, password: password){(result, error) in
-                self.displayActivityIndicatorView()
                 self.validateUserLogin(error, result)
+                //UserDefaults.standard.set(true, forKey: "sesion")
             }
         }
     }
