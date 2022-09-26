@@ -1,7 +1,12 @@
 import UIKit
 import MapKit
+import CoreLocationUI
+import CoreLocation
 
-class MapViewController: UITabBarController, MKMapViewDelegate{
+class MapViewController: UIViewController, MKMapViewDelegate{
+    
+    @IBOutlet weak var mapView: MKMapView!
+    
     
 
     let annotationLocations = [
@@ -21,14 +26,20 @@ class MapViewController: UITabBarController, MKMapViewDelegate{
         ["title": "coordinada14", "latitude": 4.836290, "longitude": -74.039034],
         ["title": "coordinada15", "latitude": 4.870157, "longitude": -74.030154]
     ]
+    
+    let manager = CLLocationManager()
+    let regionInMeters: Double = 10000
 
+    
+    fileprivate func setupLocationManager() {
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let mapView = MKMapView(frame: view.bounds)
-        view.addSubview(mapView)
         mapView.delegate = self
+        
         let coordinate = CLLocationCoordinate2D(latitude: 4.784477, longitude: -74.029529)
         
         let region = MKCoordinateRegion(center: coordinate, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
@@ -46,5 +57,66 @@ class MapViewController: UITabBarController, MKMapViewDelegate{
             }
         }
     }
+    
+    
+    @IBAction func showUserLocation(_ sender: Any) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.warning)
+        checkLocationServices()
+    }
+    
+    func centerViewOnUserLocation() {
+        if let location = manager.location?.coordinate {
+            let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+            mapView.setRegion(region, animated: true)
+        }
+    }
+    
+    
+    func checkLocationServices() {
+        if CLLocationManager.locationServicesEnabled() {
+            setupLocationManager()
+            checkLocationAuthorization()
+        } else {
+            // Show alert letting the user know they have to turn this on.
+        }
+    }
+    
+    func checkLocationAuthorization() {
+        switch CLLocationManager.authorizationStatus() {
+        case .authorizedWhenInUse:
+            mapView.showsUserLocation = true
+            centerViewOnUserLocation()
+            manager.startUpdatingLocation()
+            break
+        case .denied:
+            // Show alert instructing them how to turn on permissions
+            break
+        case .notDetermined:
+            manager.requestWhenInUseAuthorization()
+        case .restricted:
+            // Show an alert letting them know what's up
+            break
+        case .authorizedAlways:
+            break
+        default:
+            break
+        }
+    }
 }
+
+extension MapViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else { return }
+        let region = MKCoordinateRegion.init(center: location.coordinate, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+        mapView.setRegion(region, animated: true)
+    }
+    
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        checkLocationAuthorization()
+    }
+}
+
 

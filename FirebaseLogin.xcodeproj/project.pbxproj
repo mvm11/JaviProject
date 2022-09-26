@@ -288,17 +288,17 @@
 		E7547F6F28DAA6EA00E72E4D /* view */ = {
 			isa = PBXGroup;
 			children = (
-				E7DDB96728DDF0740013FB4D /* Web */,
-				E74109AD28DCE46000F851C3 /* Custom */,
 				E74109AC28DCE45700F851C3 /* Collection */,
-				E74109AB28DCE44F00F851C3 /* Gellery */,
-				E74109AA28DCE44600F851C3 /* Inicio */,
-				E74109A928DCE43D00F851C3 /* Map */,
-				E74109A828DCE05900F851C3 /* Home */,
-				E7547F3C28DA76C700E72E4D /* Main.storyboard */,
-				E7547F3A28DA76C700E72E4D /* ViewController.swift */,
+				E74109AD28DCE46000F851C3 /* Custom */,
 				E7DDB97028DE090B0013FB4D /* CustomMovieViewCell.swift */,
 				E7DDB97128DE090B0013FB4D /* CustomMovieViewCell.xib */,
+				E74109AB28DCE44F00F851C3 /* Gellery */,
+				E74109A828DCE05900F851C3 /* Home */,
+				E74109AA28DCE44600F851C3 /* Inicio */,
+				E7547F3C28DA76C700E72E4D /* Main.storyboard */,
+				E74109A928DCE43D00F851C3 /* Map */,
+				E7547F3A28DA76C700E72E4D /* ViewController.swift */,
+				E7DDB96728DDF0740013FB4D /* Web */,
 			);
 			path = view;
 			sourceTree = "<group>";

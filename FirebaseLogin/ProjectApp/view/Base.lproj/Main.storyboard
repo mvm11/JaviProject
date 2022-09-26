@@ -408,8 +408,8 @@
                         <imageReference key="backgroundImage" image="scribble.variable" catalog="system" symbolScale="medium"/>
                     </tabBar>
                     <connections>
-                        <segue destination="HYV-QK-XHk" kind="relationship" relationship="viewControllers" id="YmV-Uu-Nbd"/>
-                        <segue destination="hVN-si-Nfb" kind="relationship" relationship="viewControllers" id="3xU-fY-KKn"/>
+                        <segue destination="HYV-QK-XHk" kind="relationship" relationship="viewControllers" id="hcg-b5-IEE"/>
+                        <segue destination="hVN-si-Nfb" kind="relationship" relationship="viewControllers" id="A91-eY-Bdd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ja-xA-lQf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -423,14 +423,42 @@
                     <view key="view" contentMode="scaleToFill" id="5Q3-dL-zxZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tEc-4m-lyo">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4D-e0-zWK">
+                                <rect key="frame" x="200" y="760" width="194" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="jOE-11-cae"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="paperplane.fill" catalog="system" title="Mostrar ubicación"/>
+                                <connections>
+                                    <action selector="showUserLocation:" destination="hVN-si-Nfb" eventType="touchUpInside" id="3Nu-oE-4Fm"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="XNh-L3-48U"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tEc-4m-lyo" firstAttribute="leading" secondItem="XNh-L3-48U" secondAttribute="leading" id="5bE-nX-HcC"/>
+                            <constraint firstItem="o4D-e0-zWK" firstAttribute="leading" secondItem="XNh-L3-48U" secondAttribute="leading" constant="220" id="5wm-dh-Pp2"/>
+                            <constraint firstItem="tEc-4m-lyo" firstAttribute="top" secondItem="XNh-L3-48U" secondAttribute="top" id="B9X-5c-Mfs"/>
+                            <constraint firstItem="XNh-L3-48U" firstAttribute="bottom" secondItem="tEc-4m-lyo" secondAttribute="bottom" id="k0P-wY-He3"/>
+                            <constraint firstItem="XNh-L3-48U" firstAttribute="trailing" secondItem="o4D-e0-zWK" secondAttribute="trailing" constant="20" id="oHm-ko-S3y"/>
+                            <constraint firstItem="XNh-L3-48U" firstAttribute="trailing" secondItem="tEc-4m-lyo" secondAttribute="trailing" id="pEu-ih-YjP"/>
+                            <constraint firstItem="XNh-L3-48U" firstAttribute="bottom" secondItem="o4D-e0-zWK" secondAttribute="bottom" constant="14" id="whA-gq-3il"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Mapa" image="scribble.variable" catalog="system" id="3p5-Hg-hsR"/>
+                    <connections>
+                        <outlet property="mapView" destination="tEc-4m-lyo" id="7uP-8d-nup"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bkt-cE-82o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2551" y="421"/>
+            <point key="canvasLocation" x="2550.7246376811595" y="420.53571428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hru-QB-Sa3">
