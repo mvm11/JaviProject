@@ -55,7 +55,7 @@ class InicioViewController: UIViewController {
   
 
     fileprivate func setImageAttributes() {
-        image.layer.borderWidth = 1
+        image.layer.borderWidth = 0.05
         image.layer.masksToBounds = false
         image.layer.borderColor = UIColor.black.cgColor
         image.layer.cornerRadius = image.frame.height/2

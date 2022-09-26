@@ -4,7 +4,8 @@ import WebKit
 
 class CollectionViewController: UIViewController {
   
-    var characters = [Character]()
+    //var characters = [Character]()
+    var collectionViewModel : CollectionViewModel = CollectionViewModel()
     
     @IBOutlet weak var uiSlider: UISlider!
     
@@ -14,12 +15,19 @@ class CollectionViewController: UIViewController {
         configureDelegates()
         configureSlider()
         super.viewDidLoad()
-        parseJSON(){result in
-            self.characters = result
-            self.collectionView.reloadData()
-        }
-
         self.tabBarController?.tabBar.isHidden = true
+       
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+        self.collectionViewModel.loadCharacters(completion: {
+            self.collectionView.reloadData()
+        })
+    
+        self.navigationController?.navigationBar.prefersLargeTitles = false
        
     }
         
@@ -74,14 +82,14 @@ extension CollectionViewController : UICollectionViewDataSource, UICollectionVie
     
    
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return characters.count
+        return collectionViewModel.characters.count
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as!
         CustomCollectionViewCell
         let character:Character?
-        character = characters[indexPath.row]
+        character = collectionViewModel.characters[indexPath.row]
         let string = character!.photo
         let url = URL(string: string)
         cell.apiImage.downloaded(from: url!, contentMode: .scaleAspectFit)
