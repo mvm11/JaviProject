@@ -91,6 +91,7 @@ class MapViewController: UIViewController, MKMapViewDelegate{
             break
         case .denied:
             // Show alert instructing them how to turn on permissions
+            // programar caso para denied y cuando se salga de la aplicacion volver a preguntar por el permiso sin entrar en este metodo
             break
         case .notDetermined:
             manager.requestWhenInUseAuthorization()

@@ -59,6 +59,8 @@ class ViewController: UIViewController {
 
       }
     
+    // Crear delegado en view Model
+    // Desde esta clase se llaman los delegados del view model
     
     
     fileprivate func showErrorMessage(_ errorMessage : String) {

@@ -38,7 +38,7 @@ class InicioViewController: UIViewController {
         displayActivityIndicatorView()
         let url = "https://api.themoviedb.org/3/movie/popular?api_key=bd7847090fea4f76f5ce0c22bd1a85b8&language=en-US&page="
         
-        let service = WebService(baseUrl: url)
+        let service = MovieManager(baseUrl: url)
         
         service.downloadMovies(endPoint: "1") { movies in
         if let movie = movies {
@@ -92,20 +92,20 @@ extension InicioViewController: UICollectionViewDelegate, UICollectionViewDataSo
         
         let moviesListViewModel = self.moviesViewModel.moviesAtIndex(indexPath.row)
         
-        WebService(baseUrl: "https://image.tmdb.org/t/p/w500").downloadImages(endPoint: moviesListViewModel.images!) { image in
-//            cell.movieImage.clipsToBounds = true
-//            cell.movieImage.layer.cornerRadius = cell.movieImage.frame.height / 2
+        MovieManager(baseUrl: "https://image.tmdb.org/t/p/w500").downloadImages(endPoint: moviesListViewModel.images!) { image in
             cell.movieImage.clipsToBounds = true
-            cell.movieImage.layer.cornerRadius = 0.1*cell.movieImage.frame.width
-            cell.movieImage.contentMode = .scaleAspectFit
+            cell.movieImage.layer.cornerRadius = 0.2*cell.movieImage.frame.width
             cell.movieImage.image = image
         }
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (self.view.frame.width)/CGFloat(1.0)
-        return CGSize(width: 400, height: 200)
-        
-    }
+                return CGSize(width: 159, height: 223)
+        }
+    
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+            return 1
+            
+        }
 }

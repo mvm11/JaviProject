@@ -5,7 +5,7 @@ import UIKit
 
 
 
-class WebService {
+class MovieManager {
     
     fileprivate var baseUrl = ""
     

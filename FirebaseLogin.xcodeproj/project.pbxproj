@@ -13,6 +13,10 @@
 		E704EA1628E247A2005ACC8E /* profile.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E704EA1528E247A2005ACC8E /* profile.jpeg */; };
 		E704EA1C28E24B1A005ACC8E /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E704EA1B28E24B1A005ACC8E /* CollectionViewModel.swift */; };
 		E704EA1E28E2573C005ACC8E /* CollectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E704EA1D28E2573C005ACC8E /* CollectionManager.swift */; };
+		E704EA2128E2B172005ACC8E /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E704EA2028E2B172005ACC8E /* NoteViewController.swift */; };
+		E704EA2628E2C1B2005ACC8E /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E704EA2528E2C1B2005ACC8E /* NoteModel.swift */; };
+		E704EA2828E32DE4005ACC8E /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E704EA2728E32DE4005ACC8E /* NoteTableViewCell.swift */; };
+		E704EA2A28E330CA005ACC8E /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E704EA2928E330CA005ACC8E /* NoteViewModel.swift */; };
 		E717453C28DB495F004468F6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E717453B28DB495F004468F6 /* HomeViewController.swift */; };
 		E717453E28DB5C73004468F6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E717453D28DB5C73004468F6 /* MapViewController.swift */; };
 		E74109A728DCC7B500F851C3 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74109A628DCC7B500F851C3 /* CustomCollectionViewCell.swift */; };
@@ -71,6 +75,10 @@
 		E704EA1528E247A2005ACC8E /* profile.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = profile.jpeg; path = ../../../profile.jpeg; sourceTree = "<group>"; };
 		E704EA1B28E24B1A005ACC8E /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionViewModel.swift; path = ../../../../../../../Documents/CollectionViewModel.swift; sourceTree = "<group>"; };
 		E704EA1D28E2573C005ACC8E /* CollectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionManager.swift; sourceTree = "<group>"; };
+		E704EA2028E2B172005ACC8E /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		E704EA2528E2C1B2005ACC8E /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NoteModel.swift; path = ../../../../../../../Documents/NoteModel.swift; sourceTree = "<group>"; };
+		E704EA2728E32DE4005ACC8E /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		E704EA2928E330CA005ACC8E /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		E717453B28DB495F004468F6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E717453D28DB5C73004468F6 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		E74109A628DCC7B500F851C3 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -184,6 +192,7 @@
 			children = (
 				E79D350428DC7553009E6752 /* InicioViewController.swift */,
 				E704EA0E28E24501005ACC8E /* Collection */,
+				E704EA1F28E2B121005ACC8E /* Escribir */,
 				E704EA1228E24625005ACC8E /* Gallery */,
 				E704EA1328E24658005ACC8E /* Map */,
 				E704EA1728E24902005ACC8E /* Movie */,
@@ -286,6 +295,41 @@
 				E7DDB97428DE183D0013FB4D /* Movie.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E704EA1F28E2B121005ACC8E /* Escribir */ = {
+			isa = PBXGroup;
+			children = (
+				E704EA2428E2B193005ACC8E /* View */,
+				E704EA2328E2B185005ACC8E /* ViewModel */,
+				E704EA2228E2B175005ACC8E /* Model */,
+				E704EA2028E2B172005ACC8E /* NoteViewController.swift */,
+			);
+			path = Escribir;
+			sourceTree = "<group>";
+		};
+		E704EA2228E2B175005ACC8E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E704EA2528E2C1B2005ACC8E /* NoteModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E704EA2328E2B185005ACC8E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E704EA2928E330CA005ACC8E /* NoteViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E704EA2428E2B193005ACC8E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E704EA2728E32DE4005ACC8E /* NoteTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E74109A828DCE05900F851C3 /* Home */ = {
@@ -613,9 +657,12 @@
 			files = (
 				E704EA1C28E24B1A005ACC8E /* CollectionViewModel.swift in Sources */,
 				E7638CDC28DFD48800181222 /* MovieCollectionViewCell.swift in Sources */,
+				E704EA2A28E330CA005ACC8E /* NoteViewModel.swift in Sources */,
 				E79D350F28DCA1BF009E6752 /* GalleryViewController.swift in Sources */,
 				E79D350528DC7553009E6752 /* InicioViewController.swift in Sources */,
 				E7DDB96D28DDFF5B0013FB4D /* MovieService.swift in Sources */,
+				E704EA2828E32DE4005ACC8E /* NoteTableViewCell.swift in Sources */,
+				E704EA2628E2C1B2005ACC8E /* NoteModel.swift in Sources */,
 				E7547F6D28DA7F6B00E72E4D /* User.swift in Sources */,
 				E7547F3B28DA76C700E72E4D /* ViewController.swift in Sources */,
 				E79D350928DC879E009E6752 /* CollectionViewController.swift in Sources */,
@@ -627,6 +674,7 @@
 				E74109A728DCC7B500F851C3 /* CustomCollectionViewCell.swift in Sources */,
 				E7547F3928DA76C700E72E4D /* SceneDelegate.swift in Sources */,
 				E79D350B28DC9AA9009E6752 /* Character.swift in Sources */,
+				E704EA2128E2B172005ACC8E /* NoteViewController.swift in Sources */,
 				E717453C28DB495F004468F6 /* HomeViewController.swift in Sources */,
 				E717453E28DB5C73004468F6 /* MapViewController.swift in Sources */,
 			);
