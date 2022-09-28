@@ -265,6 +265,7 @@
 		E704EA1728E24902005ACC8E /* Movie */ = {
 			isa = PBXGroup;
 			children = (
+				E704EA3228E3CEB6005ACC8E /* MovieDetail */,
 				E704EA1A28E24930005ACC8E /* Model */,
 				E704EA1928E2491C005ACC8E /* ViewModel */,
 				E704EA1828E24911005ACC8E /* View */,
@@ -330,6 +331,37 @@
 				E704EA2728E32DE4005ACC8E /* NoteTableViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E704EA3228E3CEB6005ACC8E /* MovieDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E704EA3528E3CED6005ACC8E /* Model */,
+				E704EA3428E3CECF005ACC8E /* ViewModel */,
+				E704EA3328E3CECA005ACC8E /* View */,
+			);
+			path = MovieDetail;
+			sourceTree = "<group>";
+		};
+		E704EA3328E3CECA005ACC8E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E704EA3428E3CECF005ACC8E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E704EA3528E3CED6005ACC8E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E74109A828DCE05900F851C3 /* Home */ = {

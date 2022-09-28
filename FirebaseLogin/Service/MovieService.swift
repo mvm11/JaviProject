@@ -22,6 +22,7 @@ class MovieManager {
                     do {
                         
                         let movieResponse = try JSONDecoder().decode(Welcome.self, from: data)
+                        print("Esta es la respuesta de la API")
                         print(movieResponse.results)
                         completion(movieResponse.results)
                         
