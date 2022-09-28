@@ -13,9 +13,14 @@ class DetailMovieViewController: UIViewController {
         super.viewDidLoad()
         movieTitle.text = detailMovieViewModel.movie?.originalTitle
         movieRate.text? =
-        String(detailMovieViewModel.movie?.popularity ?? 0.0)
+        String(detailMovieViewModel.movie?.voteAverage ?? 0.0)
         
         movieDescription.text = detailMovieViewModel.movie?.overview
+        
+        let movieImageURL = "https://image.tmdb.org/t/p/w500/" + (detailMovieViewModel.movie?.posterPath)!
+        movieImage.downloaded(from: movieImageURL)
+        movieImage.layer.cornerRadius = 30.2
+        movieImage.clipsToBounds = true
         
         
     }

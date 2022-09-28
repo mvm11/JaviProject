@@ -10,7 +10,6 @@
 		38705D2704CBD7DB0FB59835 /* Pods_FirebaseLogin_FirebaseLoginUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F9844599B586BFA47F2F8B /* Pods_FirebaseLogin_FirebaseLoginUITests.framework */; };
 		BBD44AE6FF6533AC4C0A5AF8 /* Pods_FirebaseLoginTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9605C3564DD7744A992F9A62 /* Pods_FirebaseLoginTests.framework */; };
 		C92FE32E62456919B4719394 /* Pods_FirebaseLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED385751F3810CC68FF6118 /* Pods_FirebaseLogin.framework */; };
-		E704EA1628E247A2005ACC8E /* profile.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E704EA1528E247A2005ACC8E /* profile.jpeg */; };
 		E704EA1C28E24B1A005ACC8E /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E704EA1B28E24B1A005ACC8E /* CollectionViewModel.swift */; };
 		E704EA1E28E2573C005ACC8E /* CollectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E704EA1D28E2573C005ACC8E /* CollectionManager.swift */; };
 		E704EA2128E2B172005ACC8E /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E704EA2028E2B172005ACC8E /* NoteViewController.swift */; };
@@ -36,7 +35,6 @@
 		E7547F7628DAA7A100E72E4D /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7547F7528DAA7A100E72E4D /* MoviesViewModel.swift */; };
 		E7638CDC28DFD48800181222 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7638CDA28DFD48800181222 /* MovieCollectionViewCell.swift */; };
 		E7638CDD28DFD48800181222 /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7638CDB28DFD48800181222 /* MovieCollectionViewCell.xib */; };
-		E7638CE328DFF7C900181222 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E7638CE228DFF7C900181222 /* Logo.png */; };
 		E79D350528DC7553009E6752 /* InicioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D350428DC7553009E6752 /* InicioViewController.swift */; };
 		E79D350928DC879E009E6752 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D350828DC879E009E6752 /* CollectionViewController.swift */; };
 		E79D350B28DC9AA9009E6752 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D350A28DC9AA9009E6752 /* Character.swift */; };
@@ -46,6 +44,9 @@
 		E7DDB96D28DDFF5B0013FB4D /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DDB96C28DDFF5B0013FB4D /* MovieService.swift */; };
 		E7DDB97328DE090B0013FB4D /* CustomMovieViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7DDB97128DE090B0013FB4D /* CustomMovieViewCell.xib */; };
 		E7DDB97528DE183D0013FB4D /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DDB97428DE183D0013FB4D /* Movie.swift */; };
+		E7E6043A28E488F0004F14B1 /* profile.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E7E6043928E488EF004F14B1 /* profile.jpeg */; };
+		E7E6043C28E488F7004F14B1 /* imbd.png in Resources */ = {isa = PBXBuildFile; fileRef = E7E6043B28E488F6004F14B1 /* imbd.png */; };
+		E7E6043E28E488FC004F14B1 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E7E6043D28E488FB004F14B1 /* Logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +75,6 @@
 		D14AF4354B86345198D080EA /* Pods-FirebaseLoginTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseLoginTests.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseLoginTests/Pods-FirebaseLoginTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D4F9844599B586BFA47F2F8B /* Pods_FirebaseLogin_FirebaseLoginUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseLogin_FirebaseLoginUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED385751F3810CC68FF6118 /* Pods_FirebaseLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E704EA1528E247A2005ACC8E /* profile.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = profile.jpeg; path = ../../../profile.jpeg; sourceTree = "<group>"; };
 		E704EA1B28E24B1A005ACC8E /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionViewModel.swift; path = ../../../../../../../Documents/CollectionViewModel.swift; sourceTree = "<group>"; };
 		E704EA1D28E2573C005ACC8E /* CollectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionManager.swift; sourceTree = "<group>"; };
 		E704EA2028E2B172005ACC8E /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
@@ -104,7 +104,6 @@
 		E7547F7528DAA7A100E72E4D /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
 		E7638CDA28DFD48800181222 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		E7638CDB28DFD48800181222 /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
-		E7638CE228DFF7C900181222 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		E79D350428DC7553009E6752 /* InicioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioViewController.swift; sourceTree = "<group>"; };
 		E79D350828DC879E009E6752 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		E79D350A28DC9AA9009E6752 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
@@ -114,6 +113,9 @@
 		E7DDB96C28DDFF5B0013FB4D /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		E7DDB97128DE090B0013FB4D /* CustomMovieViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomMovieViewCell.xib; sourceTree = "<group>"; };
 		E7DDB97428DE183D0013FB4D /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		E7E6043928E488EF004F14B1 /* profile.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profile.jpeg; sourceTree = "<group>"; };
+		E7E6043B28E488F6004F14B1 /* imbd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imbd.png; sourceTree = "<group>"; };
+		E7E6043D28E488FB004F14B1 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		EAB2156EC04E701A6075CBBC /* Pods-FirebaseLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseLogin.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseLogin/Pods-FirebaseLogin.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -401,8 +403,9 @@
 		E7547F6828DA7A5000E72E4D /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				E7638CE228DFF7C900181222 /* Logo.png */,
-				E704EA1528E247A2005ACC8E /* profile.jpeg */,
+				E7E6043D28E488FB004F14B1 /* Logo.png */,
+				E7E6043B28E488F6004F14B1 /* imbd.png */,
+				E7E6043928E488EF004F14B1 /* profile.jpeg */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -526,12 +529,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E79D350D28DC9B1F009E6752 /* api.json in Resources */,
-				E7638CE328DFF7C900181222 /* Logo.png in Resources */,
+				E7E6043A28E488F0004F14B1 /* profile.jpeg in Resources */,
+				E7E6043E28E488FC004F14B1 /* Logo.png in Resources */,
+				E7E6043C28E488F7004F14B1 /* imbd.png in Resources */,
 				E7547F4328DA76CA00E72E4D /* LaunchScreen.storyboard in Resources */,
 				E7547F6728DA77AA00E72E4D /* GoogleService-Info.plist in Resources */,
 				E7638CDD28DFD48800181222 /* MovieCollectionViewCell.xib in Resources */,
 				E7547F4028DA76CA00E72E4D /* Assets.xcassets in Resources */,
-				E704EA1628E247A2005ACC8E /* profile.jpeg in Resources */,
 				E7DDB97328DE090B0013FB4D /* CustomMovieViewCell.xib in Resources */,
 				E7547F3E28DA76C700E72E4D /* Main.storyboard in Resources */,
 			);
