@@ -14,7 +14,7 @@
 		E704EA1E28E2573C005ACC8E /* CollectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E704EA1D28E2573C005ACC8E /* CollectionManager.swift */; };
 		E704EA2128E2B172005ACC8E /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E704EA2028E2B172005ACC8E /* NoteViewController.swift */; };
 		E704EA2628E2C1B2005ACC8E /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E704EA2528E2C1B2005ACC8E /* NoteModel.swift */; };
-		E704EA2828E32DE4005ACC8E /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E704EA2728E32DE4005ACC8E /* NoteTableViewCell.swift */; };
+		E704EA2828E32DE4005ACC8E /* NoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E704EA2728E32DE4005ACC8E /* NoteCollectionViewCell.swift */; };
 		E704EA2A28E330CA005ACC8E /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E704EA2928E330CA005ACC8E /* NoteViewModel.swift */; };
 		E704EA3728E3DF5D005ACC8E /* DetailMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E704EA3628E3DF5D005ACC8E /* DetailMovieViewController.swift */; };
 		E704EA3928E3E0F3005ACC8E /* DetailMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E704EA3828E3E0F3005ACC8E /* DetailMovieViewModel.swift */; };
@@ -79,7 +79,7 @@
 		E704EA1D28E2573C005ACC8E /* CollectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionManager.swift; sourceTree = "<group>"; };
 		E704EA2028E2B172005ACC8E /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		E704EA2528E2C1B2005ACC8E /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NoteModel.swift; path = ../../../../../../../Documents/NoteModel.swift; sourceTree = "<group>"; };
-		E704EA2728E32DE4005ACC8E /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		E704EA2728E32DE4005ACC8E /* NoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewCell.swift; sourceTree = "<group>"; };
 		E704EA2928E330CA005ACC8E /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		E704EA3628E3DF5D005ACC8E /* DetailMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieViewController.swift; sourceTree = "<group>"; };
 		E704EA3828E3E0F3005ACC8E /* DetailMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieViewModel.swift; sourceTree = "<group>"; };
@@ -335,7 +335,7 @@
 		E704EA2428E2B193005ACC8E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E704EA2728E32DE4005ACC8E /* NoteTableViewCell.swift */,
+				E704EA2728E32DE4005ACC8E /* NoteCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -672,7 +672,7 @@
 				E704EA3928E3E0F3005ACC8E /* DetailMovieViewModel.swift in Sources */,
 				E79D350528DC7553009E6752 /* InicioViewController.swift in Sources */,
 				E7DDB96D28DDFF5B0013FB4D /* MovieService.swift in Sources */,
-				E704EA2828E32DE4005ACC8E /* NoteTableViewCell.swift in Sources */,
+				E704EA2828E32DE4005ACC8E /* NoteCollectionViewCell.swift in Sources */,
 				E704EA2628E2C1B2005ACC8E /* NoteModel.swift in Sources */,
 				E7547F6D28DA7F6B00E72E4D /* User.swift in Sources */,
 				E7547F3B28DA76C700E72E4D /* ViewController.swift in Sources */,

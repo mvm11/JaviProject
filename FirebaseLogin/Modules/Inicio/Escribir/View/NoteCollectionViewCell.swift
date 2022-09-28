@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class NoteTableViewCell: UITableViewCell{
+class NoteCollectionViewCell: UICollectionViewCell{
     
     
     @IBOutlet weak var noteTitle: UILabel!

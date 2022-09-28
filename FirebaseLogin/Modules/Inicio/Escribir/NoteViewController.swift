@@ -2,7 +2,7 @@ import UIKit
 
 class NoteViewController: UIViewController {
 
-    @IBOutlet weak var noteTableView: UITableView!
+    @IBOutlet weak var noteCollectionView: UICollectionView!
     @IBOutlet weak var noteTitle: UITextField!
     @IBOutlet weak var noteDescription: UITextField!
     @IBOutlet weak var addButton: UIButton!
@@ -21,7 +21,7 @@ class NoteViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        noteTableView.reloadData()
+        noteCollectionView.reloadData()
 
     }
     
@@ -29,8 +29,8 @@ class NoteViewController: UIViewController {
       private func setDelegates() {
           noteTitle.delegate = self
           noteDescription.delegate = self
-          noteTableView.delegate = self
-          noteTableView.dataSource = self
+          noteCollectionView.delegate = self
+          noteCollectionView.dataSource = self
     }
     
     fileprivate func readUserDefaults() {
@@ -43,7 +43,7 @@ class NoteViewController: UIViewController {
         if let title = noteTitle.text, let description = noteDescription.text{
            let note = NoteModel(noteTitle: title, noteDescription: description)
             noteViewModel.addNotes(data: [note])
-            noteTableView.reloadData()
+            noteCollectionView.reloadData()
             print("Nota agregada")
         }
     }
@@ -62,24 +62,35 @@ class NoteViewController: UIViewController {
     
 }
 
-extension NoteViewController: UITableViewDelegate, UITableViewDataSource {
+extension NoteViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return noteViewModel.countData()!
     }
     
-    func setTableViewCellStyle(cell: NoteTableViewCell)->Void{
-        cell.layer.shadowColor = UIColor.black.cgColor
-        cell.layer.shadowOffset = CGSize(width: 0, height: 0)
-        cell.layer.shadowOpacity = 0.6
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "noteCell") as! NoteTableViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = noteCollectionView.dequeueReusableCell(withReuseIdentifier: "noteCell", for: indexPath) as! NoteCollectionViewCell
         let note = noteViewModel.readNotes()![indexPath.row]
         
         cell.noteTitle?.text = note.noteTitle
         cell.noteDescription?.text = note.noteDescription
+        
+  
+        cell.noteView.layer.cornerRadius = 10
+
+       
+        
+
+        
+
+        // add shadow on cell
+        cell.contentView.backgroundColor = .clear // very important
+        cell.contentView.layer.masksToBounds = false
+        cell.contentView.layer.shadowOpacity = 0.25
+        cell.contentView.layer.shadowRadius = 5
+        cell.contentView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        cell.contentView.layer.shadowColor = UIColor.black.cgColor
+
         return cell
     }
 }
