@@ -87,6 +87,15 @@ extension InicioViewController: UICollectionViewDelegate, UICollectionViewDataSo
         return self.moviesViewModel == nil ? 0 : self.moviesViewModel.numberOfRowInSection()
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("in here\(indexPath.row)")
+        if let detailMovieViewController = self.storyboard!.instantiateViewController(identifier: "DetailMovieViewController") as? DetailMovieViewController {
+            detailMovieViewController.detailMovieViewModel.movie = self.moviesViewModel.moviesList[indexPath.row]
+
+            self.navigationController?.pushViewController(detailMovieViewController, animated: true)
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "movieCollectionCell", for: indexPath) as! MovieCollectionViewCell
         
@@ -101,11 +110,10 @@ extension InicioViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-                return CGSize(width: 159, height: 223)
-        }
+            return CGSize(width: 159, height: 223)
+    }
     
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-            return 1
-            
-        }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
+    }
 }
