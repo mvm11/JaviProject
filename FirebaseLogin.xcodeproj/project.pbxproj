@@ -33,6 +33,7 @@
 		E7547F6728DA77AA00E72E4D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7547F6628DA77AA00E72E4D /* GoogleService-Info.plist */; };
 		E7547F6D28DA7F6B00E72E4D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7547F6C28DA7F6B00E72E4D /* User.swift */; };
 		E7547F7628DAA7A100E72E4D /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7547F7528DAA7A100E72E4D /* MoviesViewModel.swift */; };
+		E75EBD4B28E5DE7D00F97663 /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75EBD4A28E5DE7D00F97663 /* CanvasViewController.swift */; };
 		E7638CDC28DFD48800181222 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7638CDA28DFD48800181222 /* MovieCollectionViewCell.swift */; };
 		E7638CDD28DFD48800181222 /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7638CDB28DFD48800181222 /* MovieCollectionViewCell.xib */; };
 		E79D350528DC7553009E6752 /* InicioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D350428DC7553009E6752 /* InicioViewController.swift */; };
@@ -103,6 +104,7 @@
 		E7547F6628DA77AA00E72E4D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E7547F6C28DA7F6B00E72E4D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E7547F7528DAA7A100E72E4D /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
+		E75EBD4A28E5DE7D00F97663 /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
 		E7638CDA28DFD48800181222 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		E7638CDB28DFD48800181222 /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
 		E79D350428DC7553009E6752 /* InicioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioViewController.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 		E704EA0D28E244FA005ACC8E /* Inicio */ = {
 			isa = PBXGroup;
 			children = (
+				E75EBD4928E5DE2000F97663 /* Canvas */,
 				E79D350428DC7553009E6752 /* InicioViewController.swift */,
 				E704EA0E28E24501005ACC8E /* Collection */,
 				E704EA1F28E2B121005ACC8E /* Escribir */,
@@ -433,6 +436,14 @@
 				E7E6043928E488EF004F14B1 /* profile.jpeg */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		E75EBD4928E5DE2000F97663 /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				E75EBD4A28E5DE7D00F97663 /* CanvasViewController.swift */,
+			);
+			path = Canvas;
 			sourceTree = "<group>";
 		};
 		E7DDB96B28DDFEC10013FB4D /* Service */ = {
@@ -704,6 +715,7 @@
 				E7638CDC28DFD48800181222 /* MovieCollectionViewCell.swift in Sources */,
 				E704EA2A28E330CA005ACC8E /* NoteViewModel.swift in Sources */,
 				E79D350F28DCA1BF009E6752 /* GalleryViewController.swift in Sources */,
+				E75EBD4B28E5DE7D00F97663 /* CanvasViewController.swift in Sources */,
 				E704EA3928E3E0F3005ACC8E /* DetailMovieViewModel.swift in Sources */,
 				E79D350528DC7553009E6752 /* InicioViewController.swift in Sources */,
 				E7DDB96D28DDFF5B0013FB4D /* MovieService.swift in Sources */,
