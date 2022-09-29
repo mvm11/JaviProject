@@ -32,10 +32,10 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//            if Auth.auth().currentUser != nil {
-//                let homeViewController = self.storyboard!.instantiateViewController(identifier: "HomeViewController")
-//                self.navigateToHomeViewController(homeViewController)
-//            }
+            if Auth.auth().currentUser != nil {
+                let homeViewController = self.storyboard!.instantiateViewController(identifier: "HomeViewController")
+                self.navigateToHomeViewController(homeViewController)
+            }
     }
     
     fileprivate func setupUI() {
