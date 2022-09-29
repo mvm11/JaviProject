@@ -13,7 +13,7 @@ class CanvasViewController: UIViewController {
     
     var panGesture = UIPanGestureRecognizer()
     
-    let colors = [UIColor.blue, UIColor.red, UIColor.yellow, UIColor.green]
+    let colors = [UIColor.blue, UIColor.red, UIColor.yellow, UIColor.green, UIColor.orange, UIColor.brown, UIColor.gray, UIColor.cyan, UIColor.darkGray, UIColor.purple, UIColor.magenta]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +34,9 @@ class CanvasViewController: UIViewController {
 
         // the boundary AKA the borders. In this case if the full ViewController view
         collision.addBoundary(withIdentifier: "borders" as NSCopying, for: UIBezierPath(rect: self.view.frame))
+        
+        collision.collisionDelegate = self
+        animator.delegate = self
         
         
         animator.addBehavior(collision)
@@ -57,4 +60,16 @@ class CanvasViewController: UIViewController {
         
         animator.updateItem(usingCurrentState: blueSquare)
     }
+}
+
+extension CanvasViewController:  UICollisionBehaviorDelegate, UIDynamicAnimatorDelegate{
+    
+    
+    func collisionBehavior(_ behavior: UICollisionBehavior, endedContactFor item: UIDynamicItem, withBoundaryIdentifier identifier: NSCopying?) {
+            //print("inicia: \(identifier)")
+        }
+        func collisionBehavior(_ behavior: UICollisionBehavior, beganContactFor item: UIDynamicItem, withBoundaryIdentifier identifier: NSCopying?, at p: CGPoint) {
+            //print("termina: \(identifier)")
+            blueSquare.backgroundColor = colors.randomElement()
+        }
 }
