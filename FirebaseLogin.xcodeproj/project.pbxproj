@@ -47,6 +47,7 @@
 		E7E6043A28E488F0004F14B1 /* profile.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E7E6043928E488EF004F14B1 /* profile.jpeg */; };
 		E7E6043C28E488F7004F14B1 /* imbd.png in Resources */ = {isa = PBXBuildFile; fileRef = E7E6043B28E488F6004F14B1 /* imbd.png */; };
 		E7E6043E28E488FC004F14B1 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E7E6043D28E488FB004F14B1 /* Logo.png */; };
+		E7E6044828E5336C004F14B1 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E6044728E5336C004F14B1 /* AuthViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,7 @@
 		E7E6043928E488EF004F14B1 /* profile.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profile.jpeg; sourceTree = "<group>"; };
 		E7E6043B28E488F6004F14B1 /* imbd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imbd.png; sourceTree = "<group>"; };
 		E7E6043D28E488FB004F14B1 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		E7E6044728E5336C004F14B1 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		EAB2156EC04E701A6075CBBC /* Pods-FirebaseLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseLogin.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseLogin/Pods-FirebaseLogin.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,6 +186,7 @@
 		E704EA0C28E244F0005ACC8E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E7E6044628E5333D004F14B1 /* Auth */,
 				E7547F6C28DA7F6B00E72E4D /* User.swift */,
 				E7547F3A28DA76C700E72E4D /* ViewController.swift */,
 				E74109A828DCE05900F851C3 /* Home */,
@@ -417,6 +420,14 @@
 				E704EA1D28E2573C005ACC8E /* CollectionManager.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		E7E6044628E5333D004F14B1 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				E7E6044728E5336C004F14B1 /* AuthViewModel.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -685,6 +696,7 @@
 				E7547F3728DA76C700E72E4D /* AppDelegate.swift in Sources */,
 				E74109A728DCC7B500F851C3 /* CustomCollectionViewCell.swift in Sources */,
 				E7547F3928DA76C700E72E4D /* SceneDelegate.swift in Sources */,
+				E7E6044828E5336C004F14B1 /* AuthViewModel.swift in Sources */,
 				E79D350B28DC9AA9009E6752 /* Character.swift in Sources */,
 				E704EA2128E2B172005ACC8E /* NoteViewController.swift in Sources */,
 				E717453C28DB495F004468F6 /* HomeViewController.swift in Sources */,

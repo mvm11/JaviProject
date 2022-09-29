@@ -1,6 +1,10 @@
 import UIKit
 import FirebaseAuth
 
+protocol ViewModelDelegate {
+    func showError(message: String)
+}
+
 class ViewController: UIViewController {
     
     //MARK: - @IBOutlets
@@ -10,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     
     var activityIndicator:UIActivityIndicatorView!
+    var authViewModel : AuthViewModel = AuthViewModel()
    
     
     override func viewDidLoad() {
@@ -21,10 +26,10 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-            if Auth.auth().currentUser != nil {
-                let homeViewController = self.storyboard!.instantiateViewController(identifier: "HomeViewController")
-                self.navigateToHomeViewController(homeViewController)
-            }
+//            if Auth.auth().currentUser != nil {
+//                let homeViewController = self.storyboard!.instantiateViewController(identifier: "HomeViewController")
+//                self.navigateToHomeViewController(homeViewController)
+//            }
     }
     
     func setDelegates()->Void {
@@ -99,11 +104,10 @@ class ViewController: UIViewController {
     @IBAction func startButtonAction(_ sender: Any) {
         self.displayActivityIndicatorView()
         if let email = emailTextField.text, let password = passwordTextField.text{
-            Auth.auth().signIn(withEmail: email, password: password){(result, error) in
-                self.validateUserLogin(error, result)
+                self.authViewModel.checkCredentials(email: email, password: password)
+                //self.validateUserLogin(error, result)
                 //UserDefaults.standard.set(true, forKey: "sesion")
             }
-        }
     }
     
 
@@ -145,6 +149,18 @@ extension ViewController : UITextFieldDelegate{
             }
             return true
         }
+    
+}
+
+extension ViewController : ViewModelDelegate{
+    func showError(message: String) {
+        DispatchQueue.main.async {
+            let alertController = UIAlertController(title: "UPS!", message: message, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
     
 }
 
