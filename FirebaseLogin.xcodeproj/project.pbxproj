@@ -187,8 +187,6 @@
 			isa = PBXGroup;
 			children = (
 				E7E6044628E5333D004F14B1 /* Auth */,
-				E7547F6C28DA7F6B00E72E4D /* User.swift */,
-				E7547F3A28DA76C700E72E4D /* ViewController.swift */,
 				E74109A828DCE05900F851C3 /* Home */,
 				E704EA0D28E244FA005ACC8E /* Inicio */,
 				E7547F3C28DA76C700E72E4D /* Main.storyboard */,
@@ -216,7 +214,6 @@
 				E704EA1128E2453C005ACC8E /* Model */,
 				E704EA1028E2452B005ACC8E /* ViewModel */,
 				E704EA0F28E2450F005ACC8E /* View */,
-				E79D350828DC879E009E6752 /* CollectionViewController.swift */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -224,6 +221,7 @@
 		E704EA0F28E2450F005ACC8E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E79D350828DC879E009E6752 /* CollectionViewController.swift */,
 				E7DDB97128DE090B0013FB4D /* CustomMovieViewCell.xib */,
 				E74109A628DCC7B500F851C3 /* CustomCollectionViewCell.swift */,
 			);
@@ -277,7 +275,6 @@
 				E704EA1A28E24930005ACC8E /* Model */,
 				E704EA1928E2491C005ACC8E /* ViewModel */,
 				E704EA1828E24911005ACC8E /* View */,
-				E704EA3628E3DF5D005ACC8E /* DetailMovieViewController.swift */,
 			);
 			path = Movie;
 			sourceTree = "<group>";
@@ -285,6 +282,7 @@
 		E704EA1828E24911005ACC8E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E704EA3628E3DF5D005ACC8E /* DetailMovieViewController.swift */,
 				E7638CDA28DFD48800181222 /* MovieCollectionViewCell.swift */,
 				E7638CDB28DFD48800181222 /* MovieCollectionViewCell.xib */,
 			);
@@ -314,7 +312,6 @@
 				E704EA2428E2B193005ACC8E /* View */,
 				E704EA2328E2B185005ACC8E /* ViewModel */,
 				E704EA2228E2B175005ACC8E /* Model */,
-				E704EA2028E2B172005ACC8E /* NoteViewController.swift */,
 			);
 			path = Escribir;
 			sourceTree = "<group>";
@@ -338,7 +335,32 @@
 		E704EA2428E2B193005ACC8E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E704EA2028E2B172005ACC8E /* NoteViewController.swift */,
 				E704EA2728E32DE4005ACC8E /* NoteCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E73ACD7228E5CCFF000D178D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E7E6044728E5336C004F14B1 /* AuthViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E73ACD7328E5CD6D000D178D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E7547F6C28DA7F6B00E72E4D /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E73ACD7428E5CD98000D178D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E7547F3A28DA76C700E72E4D /* ViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -425,7 +447,9 @@
 		E7E6044628E5333D004F14B1 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				E7E6044728E5336C004F14B1 /* AuthViewModel.swift */,
+				E73ACD7428E5CD98000D178D /* View */,
+				E73ACD7328E5CD6D000D178D /* Model */,
+				E73ACD7228E5CCFF000D178D /* ViewModel */,
 			);
 			path = Auth;
 			sourceTree = "<group>";

@@ -1,8 +1,12 @@
 import UIKit
 import FirebaseAuth
 
-protocol ViewModelDelegate {
-    func showError(message: String)
+//MARK: - @ protocols
+
+protocol AuthViewModelDelegate {
+    func showError(_ message: String)
+    func hideActivityIndicator()
+    func navigateToHomeViewController(_ homeViewController: UIViewController)
 }
 
 class ViewController: UIViewController {
@@ -13,15 +17,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var startButton: UIButton!
     
+    //MARK: - @ Variables
+    
     var activityIndicator:UIActivityIndicatorView!
     var authViewModel : AuthViewModel = AuthViewModel()
    
+    //MARK: - @ Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setDelegates()
-        setActivityIndicator()
-        startButton.isEnabled = false
+        setupUI()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -32,7 +38,13 @@ class ViewController: UIViewController {
 //            }
     }
     
+    fileprivate func setupUI() {
+        setActivityIndicator()
+        startButton.isEnabled = false
+    }
+    
     func setDelegates()->Void {
+        authViewModel.delegate = self
         emailTextField.delegate = self
         passwordTextField.delegate = self
     }
@@ -51,66 +63,19 @@ class ViewController: UIViewController {
         self.activityIndicator.isHidden = false
         self.activityIndicator.startAnimating()
       }
-
-       func hideActivityIndicatorView() -> () {
-         if !self.activityIndicator.isHidden{
-            DispatchQueue.main.async {
-                self.view.isUserInteractionEnabled = true
-                self.activityIndicator.stopAnimating()
-                self.activityIndicator.isHidden = true
-
-            }
-        }
-
-      }
-    
-    // Crear delegado en view Model
-    // Desde esta clase se llaman los delegados del view model
-    
-    
-    fileprivate func showErrorMessage(_ errorMessage : String) {
-        let alertController = UIAlertController(title: "UPS!", message: errorMessage, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
-        
-        self.present(alertController, animated: true, completion: nil)
-    }
-    
-    fileprivate func validateUserLogin(_ error: Error?, _ result: AuthDataResult?) {
-        switch error {
-        case .some(let error as NSError) where error.code == AuthErrorCode.wrongPassword.rawValue:
-            self.showErrorMessage("Contraseña incorrecta")
-            self.hideActivityIndicatorView()
-        case .some(let error as NSError) where error.code == AuthErrorCode.userNotFound.rawValue:
-            self.showErrorMessage("Correo incorrecto")
-            self.hideActivityIndicatorView()
-        case .some(let error):
-            self.showErrorMessage("Login error: \(error.localizedDescription)")
-            self.hideActivityIndicatorView()
-        case .none:
-            if (result?.user) != nil {
-                self.hideActivityIndicatorView()
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let homeViewController = storyboard.instantiateViewController(identifier: "HomeViewController")
-                navigateToHomeViewController(homeViewController)
-                
-            }
-        }
-    }
-    
-    internal func navigateToHomeViewController(_ homeViewController: UIViewController) {
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(homeViewController)
-    }
     
     @IBAction func startButtonAction(_ sender: Any) {
         self.displayActivityIndicatorView()
-        if let email = emailTextField.text, let password = passwordTextField.text{
-                self.authViewModel.checkCredentials(email: email, password: password)
-                //self.validateUserLogin(error, result)
-                //UserDefaults.standard.set(true, forKey: "sesion")
-            }
+        guard let email = emailTextField.text else {return}
+        guard let password = passwordTextField.text else {return}
+        
+        self.authViewModel.user?.email = email
+        self.authViewModel.user?.password = password
+        
+        self.authViewModel.checkCredentials(user: self.authViewModel.user!)
+            
     }
     
-
     fileprivate func validateFields() -> Bool {
             return (passwordTextField.text!.count >= 8) && (isValidEmail(emailTextField.text ?? ""))
         }
@@ -119,10 +84,8 @@ class ViewController: UIViewController {
         fileprivate func updateView() {
             if(validateFields()){
                 startButton.isEnabled = true
-                startButton.tintColor = UIColor.blue
             }else{
                 startButton.isEnabled = false
-                startButton.tintColor = UIColor.gray
             }
         }
 
@@ -152,8 +115,27 @@ extension ViewController : UITextFieldDelegate{
     
 }
 
-extension ViewController : ViewModelDelegate{
-    func showError(message: String) {
+//MARK: - @ AuthViewModel Delegate Methods
+
+extension ViewController : AuthViewModelDelegate{
+    func hideActivityIndicator() {
+        DispatchQueue.main.async {
+            if !self.activityIndicator.isHidden{
+               DispatchQueue.main.async {
+                   self.view.isUserInteractionEnabled = true
+                   self.activityIndicator.stopAnimating()
+                   self.activityIndicator.isHidden = true
+
+               }
+           }
+        }
+    }
+    
+    func navigateToHomeViewController(_ homeViewController: UIViewController) {
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(homeViewController)
+    }
+    
+    func showError(_ message: String) {
         DispatchQueue.main.async {
             let alertController = UIAlertController(title: "UPS!", message: message, preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
@@ -161,6 +143,5 @@ extension ViewController : ViewModelDelegate{
             self.present(alertController, animated: true, completion: nil)
         }
     }
-    
 }
 
