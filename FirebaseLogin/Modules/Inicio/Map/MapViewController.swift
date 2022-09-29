@@ -82,6 +82,13 @@ class MapViewController: UIViewController, MKMapViewDelegate{
         }
     }
     
+    fileprivate func showAlert(_ errorMessage : String) {
+        let alertController = UIAlertController(title: "UPS!", message: errorMessage, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     func checkLocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse:
@@ -90,13 +97,15 @@ class MapViewController: UIViewController, MKMapViewDelegate{
             manager.startUpdatingLocation()
             break
         case .denied:
+            mapView.showsUserLocation = false
+            showAlert("You need to enable this permission if you want to use this function")
             // Show alert instructing them how to turn on permissions
             // programar caso para denied y cuando se salga de la aplicacion volver a preguntar por el permiso sin entrar en este metodo
             break
         case .notDetermined:
             manager.requestWhenInUseAuthorization()
         case .restricted:
-            // Show an alert letting them know what's up
+            showAlert("You need to enable this permission if you want to use this function")
             break
         case .authorizedAlways:
             break
